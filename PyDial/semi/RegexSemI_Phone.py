@@ -99,9 +99,9 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
             self.request_regex[slot] += "|(?<!"+self.DONTCARE+")"+self.WHAT+"\ "+self.slot_vocab[slot]
 
         # FIXME:  Handcrafted extra rules as required on a slot to slot basis:
-        self.request_regex["price"] += "|(how\ much\ is\ it)"
-        self.request_regex["dimension"] += "|(how\ big\ is\ it)"
-        self.request_regex["weightrange"] += "|(how\ heavy\ is\ it)"
+        self.request_regex["price"] += "|quel\ est\ son\ prix|(how\ much\ is\ it)"
+        self.request_regex["dimension"] += "|quel\ est\ sa\ taille|(how\ big\ is\ it)"
+        self.request_regex["weightrange"] += "|lourd\ ou\ leger|(how\ heavy\ is\ it)"
 
     def _set_inform_regex(self):
         """
@@ -213,14 +213,14 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
         #FIXME: 
         #-------------------------------------------------------------------------------------------    
         # TYPE:
-        self.inform_type_regex = r"(laptop|computer)"
+        self.inform_type_regex = r"(laptop|computer|phone|telephone|smartphone)"
         # SLOT: family
         slot = 'family'
         # {u'satellite': '(satellite)', u'satellite pro': '(satellite pro)', u'tecra': '(tecra)', u'portege': '(portege)'}
-        self.slot_values[slot]['satellite'] = "((to\ be\ |in|any|of)\ )*(satellite)(?!((\ |-)pro))"
-        self.slot_values[slot]['satellite pro'] = "((to\ be\ |in|any|of)\ )*((sat|satellite)(\ |-)pro)"
-        self.slot_values[slot]['tecra'] = "((to\ be\ |in|any|of)\ )*(tecra)"
-        self.slot_values[slot]['portege'] = "((to\ be\ |in|any|of)\ )*(portege)"
+        self.slot_values[slot]['i phone'] = "((marque\ |type\ )*(i\ phone|iphone|apple|pomme))"
+        self.slot_values[slot]['samsung'] = "((marque\ |type\ )*(Samsung|samsung|SGH|sgh|sg))"
+        self.slot_values[slot]['lg'] = "((to\ be\ |in|any|of)\ )*(tecra)"
+        self.slot_values[slot]['huawei'] = "((to\ be\ |in|any|of)\ )*(portege)"
         self.slot_values[slot]['dontcare'] = "any\ family"
         # SLOT: pricerange
         slot = 'pricerange'
@@ -233,35 +233,35 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
         # SLOT: batteryrating
         slot = 'batteryrating'
         # {u'exceptional': '(exceptional)', u'good': '(good)', u'standard': '(standard)'}
-        self.slot_values[slot]['exceptional'] = "(to\ be\ |any\ )*(exceptional|best)"
-        self.slot_values[slot]['good'] = "(to\ be\ |any\ )*(good\ battery|battery\ (rating\ )* good|good)(?! (\ *bye))"
-        self.slot_values[slot]['standard'] = "(to\ be\ |any\ )*(standard)"
-        self.slot_values[slot]['dontcare'] = "any\ (battery|battery(\ |-)*(range|rating))"
+        self.slot_values[slot]['exceptional'] = "(exceptionelle|exceptionnelle|meilleur|parfait|best|super)"
+        self.slot_values[slot]['good'] = "(bon|good|bonne)"
+        self.slot_values[slot]['standard'] = "(standard|moyen|moyenne)"
+        self.slot_values[slot]['dontcare'] = "(peu\ importe|quelquesoit\ la\ batterie|dontcare)"
         # SLOT: weightrange
         slot = 'weightrange'
         # {u'light weight': '(light weight)', u'mid weight': '(mid weight)', u'heavy': '(heavy)'}
-        self.slot_values[slot]['light weight'] = "(to\ be\ |any\ )*(light(-weight|\ weight)*|light\ (would\ be|is)\ good)"
-        self.slot_values[slot]['mid weight'] = "(to\ be\ |any\ )*(mid(\ ||-)|middle|medium|average|moderate)(weight)"
-        self.slot_values[slot]['heavy'] = "(?<!(how\ ))(to\ be\ |any\ )*(heavy)"
-        self.slot_values[slot]['dontcare'] = "any\ (weight|weight(\ |-)*range)|"
+        self.slot_values[slot]['light weight'] = "(leger|de\ poids\ leger|light|light\ weight)"
+        self.slot_values[slot]['mid weight'] = "(moyen|de\ poids\ moyen|mid|mid\ weight)"
+        self.slot_values[slot]['heavy'] = "(lourd| de\ poids\ lourd)"
+        self.slot_values[slot]['dontcare'] = "(peu\ importe|quelque\ soit\ le\ poids|dontcare)"
         # SLOT: isforbusinesscomputing
         slot = 'isforbusinesscomputing'
         # {u'1': '(1)', u'0': '(0)'}
-        WORK ="(work|business|(my\ )*job)"
-        FUN = "(fun|games|play|gaming|leisure|home)" 
-        self.slot_values[slot]['1'] = "((?<!(is\ it\ ))((used\ )*for\ "+WORK+"))"
+        WORK ="(work|business|professionnelle|travail|boulot|(my\ )*job)"
+        FUN = "(fun|games|play|gaming|leisure|home|jeux|personnelle)"
+        self.slot_values[slot]['1'] = "professionnelle|dans\ le\ cadre\ professionnelle|((?<!(is\ it\ ))((used\ )*for\ "+WORK+"))"
         # Next 2 create problems - copied from Phoenix basically. --TODO - DELETE THEM
         #self.slot_values[slot]['1'] += "|(?<!(is\ it\ ))(i\ want\ it\ for\ "+WORK+"(\ computing)*)"
         #self.slot_values[slot]['1'] += "|((it\'*s*|it\ is)\ for\ "+WORK+"(\computing)*))"
-        self.slot_values[slot]['0'] = "(no\ business\ computing|not\ (used\ )*(for\ )*business(\ computing)*"
-        self.slot_values[slot]['0']+="|i\ want\ a\ gaming(\ laptop)*|(i\ want\ it\ )*for\ )"+FUN
+        self.slot_values[slot]['0'] = "(personelle|personel|non|pas\ dans\ le\ cadre\ professionnelle|no\ business\ computing|not\ (used\ )*(for\ )*business(\ computing)*"
+        self.slot_values[slot]['0']+="|jeux|i\ want\ a\ gaming(\ laptop)*|(je\ veux\ un\ ordinateur \ )*pour\ )"+FUN
         # SLOT: driverange
         slot = 'driverange'
         # {u'small': '(small)', u'large': '(large)', u'medium': '(medium)'}
-        self.slot_values[slot]['small'] = "(small|little)"
-        self.slot_values[slot]['large'] = "(large|big|lots)(?!(\ is\ it))"
-        self.slot_values[slot]['medium'] = "(medium|average)"
-        self.slot_values[slot]['dontcare'] = "any\ (drive|drive(\ |-)*(range|rating))"
+        self.slot_values[slot]['small'] = "(small|little|petite|petit)"
+        self.slot_values[slot]['large'] = "(large|big|lots|grande|grand)(?!(\ is\ it))"
+        self.slot_values[slot]['medium'] = "(medium|average|moyenne|moyen)"
+        self.slot_values[slot]['dontcare'] = "(peu\ importe|quelque\ soit\ le\ poids|dontcare)""
         #-------------------------------------------------------------------------------------------    
 
 

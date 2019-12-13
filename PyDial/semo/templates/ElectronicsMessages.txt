@@ -257,7 +257,7 @@ request(isforbusinesscomputing) : "Utilisez vous le telephone dans le cadre prof
 #######
 ## NOT SURE THESE ARE EVER USED - seems at least not by the HDC policy.
 #######
-request(type, option=$X) : "What type of product do you have in mind? For example, $X?";
+request(type, option=$X) : "Quel type de telephone avez vous en tete par exemple, $X?";
 request(name, option=$X) : "What is the name of the product you are looking for? For example, $X";
 request(pricerange, option=$X) : "What pricerange would you like? For example, $X";
 request(weightrange, option=$X) : "What weight range would you like? For example, $X";
@@ -278,13 +278,13 @@ request(type, option=$X, option=$Y) : "What kind of product would you like? For 
 # Request more
 ####################################################################################################3
 reqmore() : "Can I help you with anything else?";
-reqmore(pricerange=dontcare) : "Would you like me to look for products in any price range?";
-reqmore(weightrange=dontcare) : "Would you like me to look for products in any weight range?";
-reqmore(driverange=dontcare) : "Would you like me to look for products in any drive size range?";
-reqmore(batteryrating=dontcare) : "Would you like me to look for products in any battery rating?";
-reqmore(family=dontcare) : "Would you like me to look for products in any product family?";
-reqmore(type=dontcare) : "Would you like me to look for any product?";
-reqmore(isforbusinesscomputing=dontcare) : "Would you like me to look for a laptop, ignoring whether it is for business computing or not?";
+reqmore(pricerange=dontcare) : "voulez vous que je cherche un produit dans n'importe quel  gamme de prix?";
+reqmore(weightrange=dontcare) : "voulez vous que je cherche un produit dans n'importe quel  gamme de poids?";
+reqmore(driverange=dontcare) : "voulez vous que je cherche un produit dans n'importe quel  taille de disque?";
+reqmore(batteryrating=dontcare) : "voulez vous que je cherche un produit dans n'importe quel taille de batterie?";
+reqmore(family=dontcare) : "voulez vous que je cherche un produit dans n'importe quel  famille de produit?";
+reqmore(type=dontcare) : "Voulez vous que je recherche un produit quelconque?"
+reqmore(isforbusinesscomputing=dontcare) : "Voulez vous que je recherche un telephone en ignorant le cadre professionnelle?";
 
 ####################################################################################################3
 # Explicit Confirmations
@@ -533,21 +533,21 @@ confreq(count=$X,$Y=$P, $Z=$R, $M=$T, $L=$S, $O=$V, $Q) : "There %count_rest($X)
 # Selections
 ####################################################################################################3
 select(type=$X, type=dontcare) : "Sorry, is any type OK or should it be a $X?";
-select(family=$X, family=dontcare) : "Sorry would you like the $X product family or you dont care";
-select(pricerange=$X, pricerange=dontcare) : "Sorry would you like something in the $X price range or you dont care";
-select(weightrange=$X, weightrange=dontcare) : "Sorry would you like something in the $X weight range or you dont care";
-select(driverange=$X, driverange=dontcare) : "Sorry would you like something in the $X drive size range or you dont care";
-select(batteryrating=$X, batteryrating=dontcare) : "Sorry would you like something with $X battery rating or you dont care";
+select(family=$X, family=dontcare) : "Desole souhaitez vous le $X product family or you dont care";
+select(pricerange=$X, pricerange=dontcare) : "Desole souhaitez vous quelque chose in the $X price range or you dont care";
+select(weightrange=$X, weightrange=dontcare) : "Desole souhaitez vous quelque chose in the $X weight range or you dont care";
+select(driverange=$X, driverange=dontcare) : "Desole souhaitez vous quelque chose in the $X drive size range or you dont care";
+select(batteryrating=$X, batteryrating=dontcare) : "Desole souhaitez vous quelque chose with $X battery rating or you dont care";
 select(isforbusinesscomputing=1, isforbusinesscomputing=dontcare) : "Sorry would you like it for business computing or you don't care";
 select(isforbusinesscomputing=0, isforbusinesscomputing=dontcare) : "Sorry would you like it for non-business computing or you don't care";
 
 select(type=$X,type=$Y) : "Sorry would you like $X or $Y?";
 select(family=$X,family=$Y) : "Sorry would you like $X or $Y family?";
 select(name=$X,name=$Y) : "Sorry which of these two products would you like $X or $Y?";
-select(pricerange=$X,pricerange=$Y) : "Sorry would you like something in the $X price range or in the $Y price range?";
-select(weightrange=$X,weightrange=$Y) : "Sorry would you like something in the $X weight range or in the $Y weight range?";
-select(driverange=$X,driverange=$Y) : "Sorry would you like something in the $X drive size range or in the $Y drive size range?";
-select(batteryrating=$X,batteryrating=$Y) : "Sorry would you like something with $X or $Y battery rating?";
+select(pricerange=$X,pricerange=$Y) : "Desole souhaitez vous quelque chose in the $X price range or in the $Y price range?";
+select(weightrange=$X,weightrange=$Y) : "Desole souhaitez vous quelque chose in the $X weight range or in the $Y weight range?";
+select(driverange=$X,driverange=$Y) : "Desole souhaitez vous quelque chose in the $X drive size range or in the $Y drive size range?";
+select(batteryrating=$X,batteryrating=$Y) : "Desole souhaitez vous quelque chose with $X or $Y battery rating?";
 select(isforbusinesscomputing=1,isforbusinesscomputing=0) : "Sorry would you like a product for business computing or not?";
 select($X=$Y,$X=dontcare) : "Sorry would you like $Y for $X or you dont care";
 select($X=$Y,$X=$Z) : "Sorry would you like $Y or $Z for $X";
