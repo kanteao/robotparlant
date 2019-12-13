@@ -1,0 +1,456 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ontology &#8212; PyDial 1.4.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Functional Tests" href="Tests.html" />
+    <link rel="prev" title="Simulation" href="Simulation.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ontology">
+<h1>Ontology<a class="headerlink" href="#ontology" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-ontology.DataBase"></span><div class="section" id="database-py-defines-the-data-base-interface">
+<h2>DataBase.py - defines the data base interface<a class="headerlink" href="#database-py-defines-the-data-base-interface" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Called by <a class="reference internal" href="Utilities.html#module-utils.Settings" title="utils.Settings"><code class="xref py py-mod docutils literal"><span class="pre">utils.Settings</span></code></a> to load database into global variable db</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="Utilities.html#module-utils.ContextLogger" title="utils.ContextLogger"><code class="xref py py-mod docutils literal"><span class="pre">utils.ContextLogger</span></code></a> <br /></p>
+</div>
+<hr class="docutils" />
+<dl class="class">
+<dt id="ontology.DataBase.DataBaseINTERFACE">
+<em class="property">class </em><code class="descclassname">ontology.DataBase.</code><code class="descname">DataBaseINTERFACE</code><a class="headerlink" href="#ontology.DataBase.DataBaseINTERFACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>DATA BASE HOLDERS must implement these methods</p>
+<dl class="method">
+<dt id="ontology.DataBase.DataBaseINTERFACE.entity_by_features">
+<code class="descname">entity_by_features</code><span class="sig-paren">(</span><em>constraints</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.DataBase.DataBaseINTERFACE.entity_by_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from database all entities matching the given constraints.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>constraints</strong> – features. Dict {slot:value, …} or List [(slot, op, value), …]         (NB. the tuples in the list are actually a <code class="xref py py-class docutils literal"><span class="pre">dact</span></code> instances)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(list) all entities (each a dict)  matching the given features.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.DataBase.DataBaseINTERFACE.query_entity_property">
+<code class="descname">query_entity_property</code><span class="sig-paren">(</span><em>entity</em>, <em>slot</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.DataBase.DataBaseINTERFACE.query_entity_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is needed just because we only pass entity name around at present – would be better to pass entity id around
+and retireive name when needed - as could wuickly access properties rather than searching … TODO</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ontology.DataBase.get_dist">
+<code class="descclassname">ontology.DataBase.</code><code class="descname">get_dist</code><span class="sig-paren">(</span><em>c1</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.DataBase.get_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility function for calculating the distance between 2 points on Earth.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>c1</strong> (<em>2-tuple floats</em>) – latitude,longitude</li>
+<li><strong>c2</strong> (<em>2-tuple floats</em>) – latitude,longitude</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(float) distance</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-ontology.FlatOntologyManager"></span><div class="section" id="flatontologymanager-py-domain-class-and-multidomain-api">
+<h2>FlatOntologyManager.py - Domain class and Multidomain API<a class="headerlink" href="#flatontologymanager-py-domain-class-and-multidomain-api" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<p>Controls Access to the ontology files.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="Utilities.html#module-utils.Settings" title="utils.Settings"><code class="xref py py-mod docutils literal"><span class="pre">utils.Settings</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.ContextLogger" title="utils.ContextLogger"><code class="xref py py-mod docutils literal"><span class="pre">utils.ContextLogger</span></code></a> <br />
+import <a class="reference internal" href="#module-ontology.OntologyUtils" title="ontology.OntologyUtils"><code class="xref py py-mod docutils literal"><span class="pre">ontology.OntologyUtils</span></code></a></p>
+</div>
+<hr class="docutils" />
+<dl class="class">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology">
+<em class="property">class </em><code class="descclassname">ontology.FlatOntologyManager.</code><code class="descname">FlatDomainOntology</code><span class="sig-paren">(</span><em>domainString</em>, <em>rootIn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utilities for ontology queries</p>
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology.constraintsCanBeDiscriminated">
+<code class="descname">constraintsCanBeDiscriminated</code><span class="sig-paren">(</span><em>constraints</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology.constraintsCanBeDiscriminated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the given constraints list returns a list of values which can be 
+discriminated between - i.e. there is a question which we could ask which 
+would give differences between the values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology.getRandomValueForSlot">
+<code class="descname">getRandomValueForSlot</code><span class="sig-paren">(</span><em>slot</em>, <em>nodontcare=False</em>, <em>notthese=[]</em>, <em>conditional_values=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology.getRandomValueForSlot" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>slot</strong> (<em>str</em>) – None</li>
+<li><strong>nodontcare</strong> (<em>bool</em>) – None</li>
+<li><strong>notthese</strong> (<em>list</em>) – None</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology.getSlotsToExpress">
+<code class="descname">getSlotsToExpress</code><span class="sig-paren">(</span><em>slot</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology.getSlotsToExpress" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>slot</strong> – </li>
+<li><strong>value</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">List of slot names that should be conveyed for
+the given abstract slot-value pair.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology.getValidRequestSlotsForTask">
+<code class="descname">getValidRequestSlotsForTask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology.getValidRequestSlotsForTask" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(list) with user requestable goal slot strings</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">should be extended to cover arbitrary domains and ontologies</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology.getValidSlotsForTask">
+<code class="descname">getValidSlotsForTask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology.getValidSlotsForTask" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(list) with goal slot strings</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatDomainOntology.get_sample_prob">
+<code class="descname">get_sample_prob</code><span class="sig-paren">(</span><em>candidate</em>, <em>conditional_values</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatDomainOntology.get_sample_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a prob distribution over the values in <em>candidate</em> (which could be slots, or values with a slot)
+- assigns larger probabilities to things within the <em>conditional_values</em> list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>candidate</strong> (<em>list</em>) – of strings</li>
+<li><strong>conditional_values</strong> (<em>list</em>) – of strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">numpy vector with prob distribution</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager">
+<em class="property">class </em><code class="descclassname">ontology.FlatOntologyManager.</code><code class="descname">FlatOntologyManager</code><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>A singleton class that is used system wide (single instance created in Ontology.py–&gt;globalOntology)
+Provides access to all available domains ontologies and databases.</p>
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.constraintsCanBeDiscriminated">
+<code class="descname">constraintsCanBeDiscriminated</code><span class="sig-paren">(</span><em>domainString</em>, <em>constraints</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.constraintsCanBeDiscriminated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the given constraints list returns a list of values which can be 
+discriminated between - i.e. there is a question which we could ask which 
+would give differences between the values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.ensure_domain_ontology_loaded">
+<code class="descname">ensure_domain_ontology_loaded</code><span class="sig-paren">(</span><em>domainString</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.ensure_domain_ontology_loaded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.getRandomValueForSlot">
+<code class="descname">getRandomValueForSlot</code><span class="sig-paren">(</span><em>dstring</em>, <em>slot</em>, <em>nodontcare=False</em>, <em>notthese=[]</em>, <em>conditional_values=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.getRandomValueForSlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly select a slot value for the given slot slot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.get_discourseAct">
+<code class="descname">get_discourseAct</code><span class="sig-paren">(</span><em>dstring</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.get_discourseAct" title="Permalink to this definition">¶</a></dt>
+<dd><p>NB no copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.get_informable_slots">
+<code class="descname">get_informable_slots</code><span class="sig-paren">(</span><em>dstring</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.get_informable_slots" title="Permalink to this definition">¶</a></dt>
+<dd><p>NB no copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.get_informable_slots_and_values">
+<code class="descname">get_informable_slots_and_values</code><span class="sig-paren">(</span><em>dstring</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.get_informable_slots_and_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOTE: not using copy.copy() since when used, it is only looped over, not modified</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.get_method">
+<code class="descname">get_method</code><span class="sig-paren">(</span><em>dstring</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.get_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>NB no copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.get_ontology">
+<code class="descname">get_ontology</code><span class="sig-paren">(</span><em>dstring</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.get_ontology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Note: not using copy.copy() – object assumed not to change</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.get_sorted_system_requestable_slots">
+<code class="descname">get_sorted_system_requestable_slots</code><span class="sig-paren">(</span><em>dstring</em>, <em>mode='entity'</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.get_sorted_system_requestable_slots" title="Permalink to this definition">¶</a></dt>
+<dd><p>NB no copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ontology.FlatOntologyManager.FlatOntologyManager.is_value_in_slot">
+<code class="descname">is_value_in_slot</code><span class="sig-paren">(</span><em>dstring</em>, <em>value</em>, <em>slot</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.FlatOntologyManager.FlatOntologyManager.is_value_in_slot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-ontology.Ontology"></span><div class="section" id="ontology-py-provides-system-wide-access-to-ontology">
+<h2>Ontology.py - Provides system wide access to ontology<a class="headerlink" href="#ontology-py-provides-system-wide-access-to-ontology" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="#module-ontology.FlatOntologyManager" title="ontology.FlatOntologyManager"><code class="xref py py-mod docutils literal"><span class="pre">ontology.FlatOntologyManager</span></code></a> <br />
+import <a class="reference internal" href="#module-ontology.OntologyUtils" title="ontology.OntologyUtils"><code class="xref py py-mod docutils literal"><span class="pre">ontology.OntologyUtils</span></code></a></p>
+</div>
+<hr class="docutils" />
+<dl class="function">
+<dt id="ontology.Ontology.init_global_ontology">
+<code class="descclassname">ontology.Ontology.</code><code class="descname">init_global_ontology</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ontology.Ontology.init_global_ontology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should be called ONCE by hubs [texthub, simulate, dialogueserver] (and Tasks when creating) –
+Then holds the ontology that is used and accessible system wide. Note that the class FlatOntologyManager(object) is a singleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ontology.Ontology.init_global_ontology_cer">
+<code class="descclassname">ontology.Ontology.</code><code class="descname">init_global_ontology_cer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ontology.Ontology.init_global_ontology_cer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should be called ONCE by hubs [texthub, simulate, dialogueserver] (and Tasks when creating) –
+Then holds the ontology that is used and accessible system wide. Note that the class FlatOntologyManager(object) is a singleton.</p>
+</dd></dl>
+
+</div>
+<span class="target" id="module-ontology.OntologyUtils"></span><div class="section" id="ontologyutils-py-paths-and-rules-for-ontology">
+<h2>OntologyUtils.py - paths and rules for ontology<a class="headerlink" href="#ontologyutils-py-paths-and-rules-for-ontology" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">content partly hard-coded (paths, dicts, etc.)</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="Utilities.html#module-utils.Settings" title="utils.Settings"><code class="xref py py-mod docutils literal"><span class="pre">utils.Settings</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.ContextLogger" title="utils.ContextLogger"><code class="xref py py-mod docutils literal"><span class="pre">utils.ContextLogger</span></code></a> <br /></p>
+</div>
+<hr class="docutils" />
+<dl class="function">
+<dt id="ontology.OntologyUtils.get_database_path">
+<code class="descclassname">ontology.OntologyUtils.</code><code class="descname">get_database_path</code><span class="sig-paren">(</span><em>domainString</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.OntologyUtils.get_database_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required function just to handle repository root location varying if running on grid machines etc</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ontology.OntologyUtils.get_domains_group">
+<code class="descclassname">ontology.OntologyUtils.</code><code class="descname">get_domains_group</code><span class="sig-paren">(</span><em>domains</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.OntologyUtils.get_domains_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>domains has (needs to have) been checked to be in [‘camtourist’,’sftourist’,’electronics’,’all’]:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ontology.OntologyUtils.get_ontology_path">
+<code class="descclassname">ontology.OntologyUtils.</code><code class="descname">get_ontology_path</code><span class="sig-paren">(</span><em>domainString</em><span class="sig-paren">)</span><a class="headerlink" href="#ontology.OntologyUtils.get_ontology_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required function just to handle repository root location varying if running on grid machines etc
+:rtype: object</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="../_static/cued_logo.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">PyDial</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Agent.html">Agent - the Complete Dialogue System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticBeliefTracking.html">Semantic Belief Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticParsing.html">Semantic Parsing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeliefTracking.html">Belief Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html">Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#deeprl-policies">DeepRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#feudalrl-policies">FeudalRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NLGeneration.html">Natural Language Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TopicTracking.html">Topic Tracking</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CEDM.html">Conversational Entity Dialogue Model</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Systems.html">Dialogue Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ontology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#database-py-defines-the-data-base-interface">DataBase.py - defines the data base interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flatontologymanager-py-domain-class-and-multidomain-api">FlatOntologyManager.py - Domain class and Multidomain API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ontology-py-provides-system-wide-access-to-ontology">Ontology.py - Provides system wide access to ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ontologyutils-py-paths-and-rules-for-ontology">OntologyUtils.py - paths and rules for ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tests.html">Functional Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilities.html">Utility Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Simulation.html" title="previous chapter">Simulation</a></li>
+      <li>Next: <a href="Tests.html" title="next chapter">Functional Tests</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015-2018, Dialogue Systems Group, University of Cambridge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/Docs/Ontology.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

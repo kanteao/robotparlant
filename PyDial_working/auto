@@ -1,0 +1,30 @@
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 13:04:50: root                                       GPLib.py <readPolicy>745 :  inpolicyfile:auto does not exist
+WARNING:: 13:04:50: root                            Agent.py <_logical_requirements>406 :  Enforcing hello() at first turn in singledomain system
+WARNING:: 13:04:50: root                                             texthub.py <run>87 :  NOTE: texthub is not using any error simulation at present.
+DIAL   :: 13:04:50: root                                       Agent.py <start_call>171 :  >> NEW DIALOGUE SESSION. Number: 1
+DIAL   :: 13:04:50: root                                      Agent.py <_print_turn>580 :  ** Turn 0 **
+DIAL   :: 13:04:51: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello()
+DIAL   :: 13:04:51: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: CamRestaurants
+DIAL   :: 13:04:55: root                                    Agent.py <continue_call>233 :  user input: [('Hello!', 1.0)]
+DIAL   :: 13:04:55: root                                      Agent.py <_print_turn>580 :  ** Turn 1 **
+DIAL   :: 13:04:55: root                                  SummaryAction.py <Convert>126 :  system summary act: request_food.
+DIAL   :: 13:04:55: root                                   Agent.py <_print_sys_act>595 :  | Sys > request(food)
+DIAL   :: 13:04:55: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: CamRestaurants
+DIAL   :: 13:05:46: root                                    Agent.py <continue_call>233 :  user input: [('bye', 1.0)]
+DIAL   :: 13:05:46: root                                      Agent.py <_print_turn>580 :  ** Turn 2 **
+DIAL   :: 13:05:46: root                                  SummaryAction.py <Convert>126 :  system summary act: request_pricerange.
+WARNING:: 13:05:46: root                               Agent.py <_check_USER_ending>664 :  Ignoring system act: request(pricerange) and saying goodbye as user has said bye
+DIAL   :: 13:05:46: root                                   Agent.py <_print_sys_act>595 :  | Sys > bye()
+DIAL   :: 13:05:46: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: CamRestaurants

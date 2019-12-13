@@ -1,0 +1,266 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PyDial: the CUED Python Statistical Dialog System &#8212; PyDial 1.4.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Agent - the Complete Dialogue System" href="Agent.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydial-the-cued-python-statistical-dialog-system">
+<h1>PyDial: the CUED Python Statistical Dialog System<a class="headerlink" href="#pydial-the-cued-python-statistical-dialog-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<p>To get familiar with usage of PyDial, you can use the following tutorials:</p>
+<ul class="simple">
+<li><a class="reference external" href="tutorials/Introduction%20to%20PyDial.html">Introduction to PyDial</a></li>
+<li><a class="reference external" href="tutorials/Policy%20module.html">Policy module</a></li>
+<li><a class="reference external" href="tutorials/Spoken%20Language%20Understanding.html">Spoken Language Understanding</a></li>
+<li><a class="reference external" href="tutorials/Natural%20Language%20Generation%20Module.html">Natural Language Generation</a></li>
+<li><a class="reference external" href="tutorials/How%20to%20add%20your%20own%20module.html">How to add your own module</a></li>
+<li><a class="reference external" href="tutorials/How%20to%20add%20a%20new%20domain.html">How to add a new domain</a></li>
+<li><a class="reference external" href="tutorials/Deep%20RL%20Policies.html">Deep Reinforcement Learning Policies</a></li>
+</ul>
+</div>
+<div class="section" id="system-documentation">
+<h2>System Documentation<a class="headerlink" href="#system-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Agent.html">Agent - the Complete Dialogue System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Agent.html#agent-py-wrapper-for-all-components-required-in-a-dialogue-system">Agent.py - wrapper for all components required in a dialogue system</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticBeliefTracking.html">Semantic Belief Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SemanticBeliefTracking.html#modularsemanticbelieftraker-py-separate-modelling-of-semantic-decoding-and-belief-tracking">ModularSemanticBeliefTraker.py - separate modelling of semantic decoding and belief tracking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticParsing.html">Semantic Parsing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SemanticParsing.html#semi-py-semantic-input-parser">SemI.py - Semantic input parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SemanticParsing.html#rulesemimethods-py-semantic-input-parsers-based-on-rules">RuleSemIMethods.py - Semantic input parsers based on rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SemanticParsing.html#regexsemi-py-regular-expressions-semi-parser-base-class">RegexSemI.py - Regular expressions SemI parser base class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BeliefTracking.html">Belief Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BeliefTracking.html#belieftrackingmanager-py-wrapper-for-belief-tracking-across-domains">BeliefTrackingManager.py - wrapper for belief tracking across domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BeliefTracking.html#belieftrackingutils-py-belief-tracking-utility-methods">BeliefTrackingUtils.py - Belief Tracking Utility Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html">Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Policy.html#policymanager-py-container-for-all-policies">PolicyManager.py - container for all policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Policy.html#policycommittee-py-implementation-of-the-bayesian-committee-machine-for-dialogue-management">PolicyCommittee.py - implementation of the Bayesian committee machine for dialogue management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Policy.html#bcm-tools-py-script-for-creating-slot-abstraction-mapping-files">BCM_Tools.py - Script for creating slot abstraction mapping files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#deeprl-policies">DeepRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#feudalrl-policies">FeudalRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NLGeneration.html">Natural Language Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NLGeneration.html#semomanager-py-semantic-output">SemOManager.py - Semantic Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NLGeneration.html#rulesemomethods-py-classes-for-all-rule-based-generators">RuleSemOMethods.py - Classes for all Rule based Generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NLGeneration.html#rnnsemomethods-py-interface-for-all-rnn-based-generators">RNNSemOMethods.py - Interface for all RNN based Generators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Evaluation.html">Evaluation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Evaluation.html#evaluationmanager-py-module-for-determining-the-reward">EvaluationManager.py - module for determining the reward</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TopicTracking.html">Topic Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TopicTracking.html#topictracking-py-topic-tracking-interface">TopicTracking.py -  Topic tracking interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TopicTracking.html#ruletopictrackers-py-rule-based-topic-trackers">RuleTopicTrackers.py - Rule based topic trackers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CEDM.html">Conversational Entity Dialogue Model</a></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Systems.html">Dialogue Systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Systems.html#dialogueserver-py-audio-and-voip-interface-to-spoken-sds">DialogueServer.py - Audio and VoIP interface to Spoken SDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Systems.html#simulate-py-semantic-level-user-simulator-system">Simulate.py - semantic level user simulator system.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Systems.html#texthub-py-text-level-dialog-system">Texthub.py - text level dialog system.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#simulatedusersmanager-py-combines-simulated-components-into-functional-simulator">SimulatedUsersManager.py - combines simulated components into functional simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#confidencescorer-py">ConfidenceScorer.py -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#confusionmodel-py-handcrafted-semi-error-creator">ConfusionModel.py - handcrafted SemI error creator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#errormodel-py-error-simulation">ErrorModel.py - error simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#nbestgenerator-py">NBestGenerator.py -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#usermodel-py-goal-agenda-inventor-for-sim-user">UserModel.py - goal, agenda inventor for sim user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulation.html#umhdcsim-py-handcrafted-simulated-user-behaviour">UMHdcSim.py - Handcrafted simulated user behaviour</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Ontology.html">Ontology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ontology.html#database-py-defines-the-data-base-interface">DataBase.py - defines the data base interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ontology.html#flatontologymanager-py-domain-class-and-multidomain-api">FlatOntologyManager.py - Domain class and Multidomain API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ontology.html#ontology-py-provides-system-wide-access-to-ontology">Ontology.py - Provides system wide access to ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ontology.html#ontologyutils-py-paths-and-rules-for-ontology">OntologyUtils.py - paths and rules for ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tests.html">Functional Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tests.html#running-pydial-test-programs">Running PyDial Test Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tests.html#module-tests.test_DialogueServer">List of Current Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Utilities.html">Utility Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#contextlogger-py-wrapper-for-python-logging-api">ContextLogger.py - wrapper for Python logging API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#dact-py-dialogue-act-specification">dact.py - dialogue act specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#diaact-py-dialogue-act-specification-that-extends-dact-py">DiaAct.py - dialogue act specification that extends dact.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#dialoguestate-py-dialogue-state-object-specification">DialogueState.py - dialogue state object specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#dummydialogueserverclient-py-script-for-talking-to-the-dialogue-server-via-cmd-line-i-e-without-using-any-voice-client">dummyDialogueServerClient.py - script for talking to the dialogue server via cmd line, i.e. without using any voice client.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#scanner-py-string-scanning-utility">Scanner.py - string scanning utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html#settings-py-global-variables-config-random-num-generator">Settings.py - global variables: config, random num generator</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Acknowledgements.html">Acknowledgements</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="../py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="../search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="../_static/cued_logo.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">PyDial</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Agent.html">Agent - the Complete Dialogue System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticBeliefTracking.html">Semantic Belief Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticParsing.html">Semantic Parsing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeliefTracking.html">Belief Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html">Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#deeprl-policies">DeepRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#feudalrl-policies">FeudalRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NLGeneration.html">Natural Language Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TopicTracking.html">Topic Tracking</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CEDM.html">Conversational Entity Dialogue Model</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Systems.html">Dialogue Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Ontology.html">Ontology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tests.html">Functional Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilities.html">Utility Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="Agent.html" title="next chapter">Agent - the Complete Dialogue System</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015-2018, Dialogue Systems Group, University of Cambridge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/Docs/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

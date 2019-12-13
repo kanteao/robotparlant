@@ -1,0 +1,348 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Natural Language Generation &#8212; PyDial 1.4.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Evaluation" href="Evaluation.html" />
+    <link rel="prev" title="Policy" href="Policy.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="natural-language-generation">
+<h1>Natural Language Generation<a class="headerlink" href="#natural-language-generation" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-semo.SemOManager"></span><div class="section" id="semomanager-py-semantic-output">
+<h2>SemOManager.py - Semantic Output<a class="headerlink" href="#semomanager-py-semantic-output" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="Utilities.html#module-utils.Settings" title="utils.Settings"><code class="xref py py-mod docutils literal"><span class="pre">utils.Settings</span></code></a> <br />
+import <a class="reference internal" href="Ontology.html#module-ontology.OntologyUtils" title="ontology.OntologyUtils"><code class="xref py py-mod docutils literal"><span class="pre">ontology.OntologyUtils</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.ContextLogger" title="utils.ContextLogger"><code class="xref py py-mod docutils literal"><span class="pre">utils.ContextLogger</span></code></a></p>
+</div>
+<hr class="docutils" />
+<dl class="class">
+<dt id="semo.SemOManager.SemO">
+<em class="property">class </em><code class="descclassname">semo.SemOManager.</code><code class="descname">SemO</code><a class="headerlink" href="#semo.SemOManager.SemO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface class for a single domain langauge generator. Responsible for generating a natural langauge sentence from a dialogue act representation. 
+To create your own SemO methods, derive from this class.</p>
+<dl class="method">
+<dt id="semo.SemOManager.SemO.generate">
+<code class="descname">generate</code><span class="sig-paren">(</span><em>act</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.SemOManager.SemO.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main generation method: mapping from system act to natural language
+:param act: the system act to generate
+:type act: str
+:returns: the natural language realisation of the given system act</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="semo.SemOManager.SemOManager">
+<em class="property">class </em><code class="descclassname">semo.SemOManager.</code><code class="descname">SemOManager</code><a class="headerlink" href="#semo.SemOManager.SemOManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>SemO manager for each domain. Independently for each domain you can load a generator.
+Implementations of actual generators are in other modules</p>
+<dl class="method">
+<dt id="semo.SemOManager.SemOManager._ensure_booted">
+<code class="descname">_ensure_booted</code><span class="sig-paren">(</span><em>domainTag</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.SemOManager.SemOManager._ensure_booted" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>The function to ensure the given domain generator is properly loaded</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param domainTag:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">the domain string unique identifier, the domain you operate on.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="semo.SemOManager.SemOManager._load_domains_semo">
+<code class="descname">_load_domains_semo</code><span class="sig-paren">(</span><em>dstring</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.SemOManager.SemOManager._load_domains_semo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the config file the SemO choice of method for this domain</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="semo.SemOManager.SemOManager.generate">
+<code class="descname">generate</code><span class="sig-paren">(</span><em>act</em>, <em>domainTag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.SemOManager.SemOManager.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main generation method which maps the given system act into natural langauge realisation. 
+:param domainTag: the domain string unique identifier, the domain you operate on.
+:act: the system act you want to generate</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-semo.RuleSemOMethods"></span><div class="section" id="rulesemomethods-py-classes-for-all-rule-based-generators">
+<h2>RuleSemOMethods.py - Classes for all Rule based Generators<a class="headerlink" href="#rulesemomethods-py-classes-for-all-rule-based-generators" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="#module-semo.SemOManager" title="semo.SemOManager"><code class="xref py py-mod docutils literal"><span class="pre">semo.SemOManager</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.Settings" title="utils.Settings"><code class="xref py py-mod docutils literal"><span class="pre">utils.Settings</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.DiaAct" title="utils.DiaAct"><code class="xref py py-mod docutils literal"><span class="pre">utils.DiaAct</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.dact" title="utils.dact"><code class="xref py py-mod docutils literal"><span class="pre">utils.dact</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.ContextLogger" title="utils.ContextLogger"><code class="xref py py-mod docutils literal"><span class="pre">utils.ContextLogger</span></code></a> <br />
+import <a class="reference internal" href="Ontology.html#module-ontology.OntologyUtils" title="ontology.OntologyUtils"><code class="xref py py-mod docutils literal"><span class="pre">ontology.OntologyUtils</span></code></a> <br /></p>
+</div>
+</div>
+<hr class="docutils" />
+<dl class="class">
+<dt id="semo.RuleSemOMethods.PassthroughSemO">
+<em class="property">class </em><code class="descclassname">semo.RuleSemOMethods.</code><code class="descname">PassthroughSemO</code><a class="headerlink" href="#semo.RuleSemOMethods.PassthroughSemO" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Does nothing</strong> - simply pass system act directly through.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="semo.RuleSemOMethods.BasicSemO">
+<em class="property">class </em><code class="descclassname">semo.RuleSemOMethods.</code><code class="descname">BasicSemO</code><span class="sig-paren">(</span><em>domainTag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.RuleSemOMethods.BasicSemO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Template-based output generator.  Note that the class inheriting from object is important - without this the super method
+can not be called – This relates to ‘old-style’ and ‘new-style’ classes in python if interested …</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>templatefile</strong> (<em>[</em><em>basicsemo</em><em>]</em>) – The template file to use for generation.</li>
+<li><strong>emphasis</strong> (<em>[</em><em>basicsemo</em><em>]</em>) – Generate emphasis tags.</li>
+<li><strong>emphasisopen</strong> (<em>[</em><em>basicsemo</em><em>]</em>) – Emphasis open tag (default: &amp;ltEMPH&amp;lt).</li>
+<li><strong>emphasisclose</strong> (<em>[</em><em>basicsemo</em><em>]</em>) – Emphasis close tag (default: &amp;lt/EMPH&amp;lt).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="semo.RuleSemOMethods.BasicTemplateRule">
+<em class="property">class </em><code class="descclassname">semo.RuleSemOMethods.</code><code class="descname">BasicTemplateRule</code><span class="sig-paren">(</span><em>scanner</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.RuleSemOMethods.BasicTemplateRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>The template rule corresponds to a single line in a template rules file.
+This consists of an act (including non-terminals) that the rule applies to with an output string to generate
+(again including non-terminals).
+Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>select(food=$X, food=dontcare) : &quot;Sorry would you like $X food or you dont care&quot;;
+ self.rue_items = {food: [$X, dontcare]}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="semo.RuleSemOMethods.BasicTemplateFunction">
+<em class="property">class </em><code class="descclassname">semo.RuleSemOMethods.</code><code class="descname">BasicTemplateFunction</code><span class="sig-paren">(</span><em>scanner</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.RuleSemOMethods.BasicTemplateFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function in the generation rules that converts a group of inputs into an output string.
+The use of template functions allows for simplification of the generation file as the way
+a given group of variables is generated can be extended over multiple rules.</p>
+<p>The format of the function is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>%functionName($param1, $param2, ...) {
+    p1, p2, ... : &quot;Generation output&quot;;}
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scanner</strong> (<em>instance</em>) – of <code class="xref py py-class docutils literal"><span class="pre">Scanner</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="semo.RuleSemOMethods.BasicTemplateFunctionRule">
+<em class="property">class </em><code class="descclassname">semo.RuleSemOMethods.</code><code class="descname">BasicTemplateFunctionRule</code><span class="sig-paren">(</span><em>scanner</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.RuleSemOMethods.BasicTemplateFunctionRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single line of a basic template function. This does a conversion of a group of values into a string.
+e.g. p1, p2, … : “Generation output”</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scanner</strong> (<em>instance</em>) – of <code class="xref py py-class docutils literal"><span class="pre">Scanner</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="semo.RuleSemOMethods.BasicTemplateGenerator">
+<em class="property">class </em><code class="descclassname">semo.RuleSemOMethods.</code><code class="descname">BasicTemplateGenerator</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.RuleSemOMethods.BasicTemplateGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The basic template generator loads a list of template-based rules from a string.
+These are then applied on any input dialogue act and used to generate an output string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) – the template rules file</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-semo.RNNSemOMethods"></span><div class="section" id="rnnsemomethods-py-interface-for-all-rnn-based-generators">
+<h2>RNNSemOMethods.py - Interface for all RNN based Generators<a class="headerlink" href="#rnnsemomethods-py-interface-for-all-rnn-based-generators" title="Permalink to this headline">¶</a></h2>
+<p>Copyright CUED Dialogue Systems Group 2015 - 2017</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>CUED Imports/Dependencies:</p>
+<p class="last">import <a class="reference internal" href="#module-semo.SemOManager" title="semo.SemOManager"><code class="xref py py-mod docutils literal"><span class="pre">semo.SemOManager</span></code></a> <br />
+import <a class="reference internal" href="#module-semo.RuleSemOMethods" title="semo.RuleSemOMethods"><code class="xref py py-mod docutils literal"><span class="pre">semo.RuleSemOMethods</span></code></a> <br />
+import <code class="xref py py-mod docutils literal"><span class="pre">semo.RNNLG.generator.net</span></code> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.Settings" title="utils.Settings"><code class="xref py py-mod docutils literal"><span class="pre">utils.Settings</span></code></a> <br />
+import <a class="reference internal" href="Utilities.html#module-utils.ContextLogger" title="utils.ContextLogger"><code class="xref py py-mod docutils literal"><span class="pre">utils.ContextLogger</span></code></a></p>
+</div>
+</div>
+<hr class="docutils" />
+<dl class="class">
+<dt id="semo.RNNSemOMethods.RNNSemO">
+<em class="property">class </em><code class="descclassname">semo.RNNSemOMethods.</code><code class="descname">RNNSemO</code><span class="sig-paren">(</span><em>domainTag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#semo.RNNSemOMethods.RNNSemO" title="Permalink to this definition">¶</a></dt>
+<dd><p>An interface for RNN-based output generator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>configuration</strong> (<em>[</em><em>rnnsemo</em><em>]</em>) – The config file to use for initialising RNNLG</li>
+<li><strong>template file</strong> (<em>[</em><em>rnnsemo</em><em>]</em>) – The template file for a default rule-based generator. This rule based generator is used when the RNN generator cannot generate sensible sentences.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="../_static/cued_logo.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">PyDial</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Agent.html">Agent - the Complete Dialogue System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticBeliefTracking.html">Semantic Belief Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SemanticParsing.html">Semantic Parsing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeliefTracking.html">Belief Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html">Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#deeprl-policies">DeepRL Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy.html#feudalrl-policies">FeudalRL Policies</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Natural Language Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#semomanager-py-semantic-output">SemOManager.py - Semantic Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rulesemomethods-py-classes-for-all-rule-based-generators">RuleSemOMethods.py - Classes for all Rule based Generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rnnsemomethods-py-interface-for-all-rnn-based-generators">RNNSemOMethods.py - Interface for all RNN based Generators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TopicTracking.html">Topic Tracking</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CEDM.html">Conversational Entity Dialogue Model</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Systems.html">Dialogue Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Ontology.html">Ontology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tests.html">Functional Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilities.html">Utility Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Policy.html" title="previous chapter">Policy</a></li>
+      <li>Next: <a href="Evaluation.html" title="next chapter">Evaluation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015-2018, Dialogue Systems Group, University of Cambridge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/Docs/NLGeneration.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

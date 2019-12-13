@@ -1,0 +1,24 @@
+%count_rest($count) {
+  0 : "n'y a plus de produit";
+  1 : "y a un produit";
+  $count : "y a $count produits";
+}
+%q($X){
+  meat : "Quel type de viande voulez-vous?";
+  kind : "Que voulez-vous?";
+  energy : "A quel voulez-vous que ce soit calorique?";
+  sweetness : "A quel voulez-vous que ce soit sucré?";
+  saltiness : "A quel voulez-vous que ce soit salé?";
+  sweetness : "A quel voulez-vous que ce soit sucré?";
+  happymealavailable : "Voulez-vous que ce soit disponible en Happy Meal?";
+}
+
+hello() : "Bonjour je suis votre assistant. Quel Television voulez vous";
+
+hello(more) : "Puis-je faire autre chose pour vous?";
+
+null() : "Navré, je n'ai pas compris ce que vous avez dit. Pouvez-vous répéter, s'il vous plaît?";
+#null() : "%null_str(sorry), %null_str(didnotunderstand). %null_str(canrepeat)?";
+repeat() : "%null_str(canrepeat)?";
+bye() : "Merci, au revoir!";
+

@@ -249,19 +249,21 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
         # {u'1': '(1)', u'0': '(0)'}
         WORK ="(work|business|professionnelle|travail|boulot|(my\ )*job)"
         FUN = "(fun|games|play|gaming|leisure|home|jeux|personnelle)"
-        self.slot_values[slot]['1'] = "professionnelle|dans\ le\ cadre\ professionnelle|((?<!(is\ it\ ))((used\ )*for\ "+WORK+"))"
+        #self.slot_values[slot]['1'] = "professionnelle|dans\ le\ cadre\ professionnelle|((?<!(is\ it\ ))((used\ )*for\ "+WORK+"))"
+        self.slot_values[slot]['1'] = "(oui|yes|professionelle)"
         # Next 2 create problems - copied from Phoenix basically. --TODO - DELETE THEM
         #self.slot_values[slot]['1'] += "|(?<!(is\ it\ ))(i\ want\ it\ for\ "+WORK+"(\ computing)*)"
         #self.slot_values[slot]['1'] += "|((it\'*s*|it\ is)\ for\ "+WORK+"(\computing)*))"
-        self.slot_values[slot]['0'] = "(personelle|personel|non|pas\ dans\ le\ cadre\ professionnelle|no\ business\ computing|not\ (used\ )*(for\ )*business(\ computing)*"
-        self.slot_values[slot]['0']+="|jeux|i\ want\ a\ gaming(\ laptop)*|(je\ veux\ un\ ordinateur \ )*pour\ )"+FUN
+        self.slot_values[slot]['0'] = "(no|non|personel)"
+        #self.slot_values[slot]['0'] = "(personelle|personel|non|pas\ dans\ le\ cadre\ professionnelle|no\ business\ computing|not\ (used\ )*(for\ )*business(\ computing)*"
+        #self.slot_values[slot]['0']+="|jeux|i\ want\ a\ gaming(\ laptop)*|(je\ veux\ un\ ordinateur \ )*pour\ )"+FUN
         # SLOT: driverange
         slot = 'driverange'
         # {u'small': '(small)', u'large': '(large)', u'medium': '(medium)'}
         self.slot_values[slot]['small'] = "(small|little|petite|petit)"
         self.slot_values[slot]['large'] = "(large|big|lots|grande|grand)(?!(\ is\ it))"
         self.slot_values[slot]['medium'] = "(medium|average|moyenne|moyen)"
-        self.slot_values[slot]['dontcare'] = "(peu\ importe|quelque\ soit\ le\ poids|dontcare)""
+        self.slot_values[slot]['dontcare'] = "(peu\ importe|quelque\ soit\ le\ poids|dontcare)"
         #-------------------------------------------------------------------------------------------    
 
 

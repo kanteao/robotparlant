@@ -1,0 +1,43 @@
+INFO   :: 22:08:22: root                                DialogueServer.py <<module>>806 :  Random Seed is 987
+INFO   :: 22:08:22: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/CamRestaurants-rules.json
+INFO   :: 22:08:22: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/CamRestaurants-dbase.db
+INFO   :: 22:08:22: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/CamHotels-rules.json
+INFO   :: 22:08:22: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/CamHotels-dbase.db
+INFO   :: 22:08:22: root                                    Agent.py <_hand_control>454 :  Launching Dialogue Manager for domain: topicmanager
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:22: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 22:08:26: root                     PolicyManager.py <_load_domains_policy>229 :  No policy section specified for domain: topicmanager - defaulting to HDC
+ERROR  :: 22:08:26: root                              ContextLogger.py <_exceptHook>263 :  Uncaught exception: <type 'exceptions.ImportError'>( cannot import name HDCTopicManager )
+          Traceback (most recent call last):
+            File "DialogueServer.py", line 810, in <module>
+              dial_server = DialogueServer()
+            File "DialogueServer.py", line 388, in __init__
+              self.agent_factory = Agent.AgentFactory(hub_id='dialogueserver')
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/Agent.py", line 788, in __init__
+              self.init_agents(hub_id)
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/Agent.py", line 802, in init_agents
+              self.agents['Smith'] = DialogueAgent(agent_id='Smith', hub_id=hub_id)  # primary agent, can be copied
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/Agent.py", line 142, in __init__
+              self.restart_agent(session_id=None)
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/Agent.py", line 380, in restart_agent
+              self._hand_control(domainString=self.topic_tracker.operatingDomain, previousDomainString=None)
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/Agent.py", line 457, in _hand_control
+              self._bootup(domainString, previousDomainString)
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/Agent.py", line 487, in _bootup
+              self.policy_manager.bootup(domainString)
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/policy/PolicyManager.py", line 92, in bootup
+              self._load_domains_policy(domainString)
+            File "/mnt/c/Users/Natalie/Downloads/dialoguesystems-pydial-348f99eef129/policy/PolicyManager.py", line 257, in _load_domains_policy
+              from policy import HDCTopicManager
+          ImportError: cannot import name HDCTopicManager
+          

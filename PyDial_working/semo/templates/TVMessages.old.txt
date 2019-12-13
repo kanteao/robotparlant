@@ -1,0 +1,132 @@
+%count_rest($count) {
+  0 : "n'y a plus de produit";
+  1 : "y a un produit";
+  $count : "y a $count produits";
+}
+%q($X){
+  series : "Quel est la serie de television que vous voulez?";
+  pricerange : "Voulez vous qu'il soit chere ou abordable";
+  eco : "A quel notation economique?";
+  screensizerange : "Quel est la taille d'ecran";
+  hdmi : "Combien de port HDMI possede t il";
+  usb : "Possede t il des ports USB?";
+}
+%series_inf($series) {
+  t5: "est de la serie t5";
+  l6: "est de la serie l6";
+  l7: "est de la serie l7";
+  l5: "est de la serie l5";
+  l2: "est de la serie l2";
+  l1: "est de la serie l1";
+  l9: "est de la serie l9";
+  w3: "est de la serie w3";
+  w2: "est de la serie W2";
+  w1: "est de la serie w1";
+  d1: "est de la serie d1";
+  e2: "est de la serie e2";
+}
+%series_adj($series) {
+  t5: "t5";
+  l6: "l6";
+  l7: "l7";
+  l5: "l5";
+  l2: "l2";
+  l1: "l1";
+  l9: "l9";
+  w3: "w3";
+  w2: "w2";
+  w1: "w1";
+  d1: "d1";
+  e2: "e2";
+}
+%pricerange_inf($pricerange) {
+  cheap: "est moins chère";
+  expensive: "est chère";
+}
+%pricerange_adj($pricerange) {
+  cheap: "pas chère";
+  expensive: "chère";
+}
+%eco_inf($eco) {
+  aplus: "est de classe economique a+";
+  aplusplus: "est de classe economique a++";
+  b: "est de classe economique b";
+  a: "est de classe economique a";
+  c: "est de classe economique c";
+}
+%eco_adj($eco) {
+  aplus: "classe economique a+";
+  aplusplus: "classe economique a++";
+  b: "classe economique b";
+  a: "classe economique a";
+  c: "classe economique c";
+}
+%screensizerange_inf($screensizerange) {
+  large: "avec un ecran large";
+  medium: "avec un ecran moyen";
+  small: "avec un petit ecran";
+}
+%screensizerange_adj($screensizerange) {
+  large: "ecran large";
+  medium: "ecran moyen";
+  small: "petit ecran";
+}
+%usb_inf($usb) {
+  1: "avec des ports usb";
+  0: "pas de port usb";
+}
+%usb_adj($usb) {
+  1: "est avec des ports usb";
+  0: "est sans port usb";
+}
+%hdmi_inf($hdmi) {
+  4: "est avec 4 ports hdmi";
+  3: "est avec 4 ports hdmi";
+  2: "est avec 4 ports hdmi";
+  1: "est avec 4 ports hdmi";
+}
+%hdmi_inf($hdmi) {
+  4: "avec 4 ports hdmi";
+  3: "avec 4 ports hdmi";
+  2: "avec 4 ports hdmi";
+  1: "avec 4 ports hdmi";
+}
+hello() : "Bonjour je suis votre assistant. Quel Television voulez vous";
+
+hello(more) : "Puis-je faire autre chose pour vous?";
+
+null() : "Navré, je n'ai pas compris ce que vous avez dit. Pouvez-vous répéter, s'il vous plaît?";
+#null() : "%null_str(sorry), %null_str(didnotunderstand). %null_str(canrepeat)?";
+repeat() : "%null_str(canrepeat)?";
+bye() : "Merci, au revoir!";
+
+request(task) : "Que voulez-vous?";
+request(series) : "Quel est la serie de TV que vous voulez?";
+request(pricerange) : "quel est la marge de prix desirée?";
+request(eco) : "A quel point voulez-vous que ce soit economique?";
+request(screensizerange) : "Quel est la taille d'ecran souhaitée?";
+request(hdmi) : "Combien de port HDMI?";
+request(usb) : "Voulez-vous que ce soit disponible avec des ports usb?";
+
+request(series, option=$X) : "Quel est la serie de TV que vous voulez? %series_adj($X)";
+request(pricerange, option=$X) : "quel est la marge de prix desirée? %pricerange_adj($X)";
+request(eco, option=$X) : "A quel point voulez-vous que ce soit economique? %eco_adj($X)";
+request(screensizerange, option=$X) : "Quel est la taille d'ecran souhaitée? %screensizerange_adj($X)";
+request(hdmi, option=$X) : "Combien de port HDMI? %hdmi_adj($X)";
+request(usb, option=$X) : "Voulez-vous que ce soit disponible avec des ports usb? %usb_adj($X)";
+
+request(series, option=$X, option=$Y) : "Quel est la serie de TV que vous voulez? %series_adj($X) %series_adj($X)";
+request(pricerange, option=$X, option=$Y) : "quel est la marge de prix desirée? %pricerange_adj($X) %pricerange_adj($X)";
+request(eco, option=$X, option=$Y) : "A quel point voulez-vous que ce soit economique? %eco_adj($X) %eco_adj($X)";
+request(screensizerange, option=$X, option=$Y) : "Quel est la taille d'ecran souhaitée? %screensizerange_adj($X) %screensizerange_adj($X)";
+request(hdmi, option=$X, option=$Y) : "Combien de port HDMI? %hdmi_adj($X) %hdmi_adj($X)";
+request(usb, option=$X, option=$Y) : "Voulez-vous que ce soit disponible avec des ports usb? %usb_adj($X) %usb_adj($X)";
+
+
+reqmore() : "Puis-je vous aider en quoi que ce soit d'autre?";
+reqmore(series=dontcare) : "Voulez-vous chercher parmi tous les types de produits?";
+reqmore(pricerange=dontcare) : "Voulez-vous ignorer la marge de prix?";
+reqmore(eco=dontcare) : "Voulez-vous ignorer la classe economique?";
+reqmore(screensizerange=dontcare) : "Voulez-vous ignorer la taille de l'ecran";
+reqmore(hdmi=dontcare) : "Voulez-vous ignorer la presence de hdmi?";
+reqmore(usb=dontcare) : "Voulez-vous ignorer la présence d'usb?";
