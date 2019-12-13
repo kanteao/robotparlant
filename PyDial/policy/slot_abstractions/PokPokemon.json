@@ -1,0 +1,10 @@
+{
+    "real2abstract": { 
+        "name": "name",
+        "type": "type", 
+    }, 
+    "abstract2real": {
+        "name": "name",
+        "type": "type"
+    }
+}
