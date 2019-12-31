@@ -15,10 +15,10 @@ Contacter fabrice.lefevre@univ-avignon, 2019
 
 ==============
 Pour tester le serveur :
-curl -i -X POST -H 'Content-Type: application/json' -d '{"session": "9898"}' http://10.120.10.78:8082/newcall
-curl -i -X POST -H 'Content-Type: application/json' -d '{"session": "9898","result":{"resultType":"Partial", "alts":[{"transcript":"i want an hotel", "confidence":1}]}}' http://10.120.10.78:8082/next
+curl -i -X POST -H 'Content-Type: application/json' -d '{"session": "9898"}' http://localhost:8082/newcall
+curl -i -X POST -H 'Content-Type: application/json' -d '{"session": "9898","result":{"resultType":"Partial", "alts":[{"transcript":"i want an hotel", "confidence":1}]}}' http://localhost:8082/next
 ...
-curl -i -X POST -H 'Content-Type: application/json' -d '{"session": "9898"}' http://10.120.10.78:8082/clean
+curl -i -X POST -H 'Content-Type: application/json' -d '{"session": "9898"}' http://localhost:8082/clean
 ==============
 
 ### NAO

@@ -1,0 +1,141 @@
+INFO   :: 14:33:22: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/Phone-rules.json
+INFO   :: 14:33:22: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/Phone-dbase.db
+INFO   :: 14:33:22: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: Phone
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 14:33:22: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: Phone - defaulting to HDC
+WARNING:: 14:33:22: root                                      HDCPolicy.py <__init__>82 :  Policy file is given: , but policy type is set to hdc. Ignoring the given policy file and using hdc policy.
+WARNING:: 14:33:22: root                            Agent.py <_logical_requirements>405 :  Enforcing hello() at first turn in singledomain system
+INFO   :: 14:33:22: root                                     DialogueServer.py <run>419 :  Server starting localhost:8082 (level=info)
+INFO   :: 14:33:31: root                                       Agent.py <start_call>831 :  Agent Smith has been reactivated.
+DIAL   :: 14:33:31: root                                       Agent.py <start_call>170 :  >> NEW DIALOGUE SESSION. Number: 1
+INFO   :: 14:33:31: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+DIAL   :: 14:33:31: root                                      Agent.py <_print_turn>576 :  Turn 0
+DIAL   :: 14:33:31: root                                   Agent.py <_print_sys_act>591 :  Sys > hello()
+DIAL   :: 14:33:31: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:33:31: root                                 DialogueServer.py <do_POST>208 :  A new call has started. Session: 9898 
+INFO   :: 14:33:31: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: Salut, Bienvenue sur votre assistant pour SmartPhone? Que recherchez vous? to tts.
+INFO   :: 14:33:49: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:33:49: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'je veux un telephone', 1)]
+DIAL   :: 14:33:49: root                                    Agent.py <continue_call>232 :  user input: [(u'je veux un telephone', 1)]
+DIAL   :: 14:33:49: root                                      Agent.py <_print_turn>576 :  Turn 1
+INFO   :: 14:33:49: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:33:49: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:33:50: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(type=telephone)', 1.0]]
+INFO   :: 14:33:50: root                                            SemI.py <decode>201 :  [('inform(type=telephone)', 1)]
+INFO   :: 14:33:50: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(type=telephone)', 1)]
+INFO   :: 14:33:50: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(type=telephone)', 1)]
+DIAL   :: 14:33:50: root                                   Agent.py <_print_sys_act>591 :  Sys > request(batteryrating)
+DIAL   :: 14:33:50: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:33:50: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: Quel estimation de battery voulez vous standard, bonne, or exceptionelle? to tts.
+INFO   :: 14:34:09: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:34:09: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'battery standard', 1)]
+DIAL   :: 14:34:09: root                                    Agent.py <continue_call>232 :  user input: [(u'battery standard', 1)]
+DIAL   :: 14:34:09: root                                      Agent.py <_print_turn>576 :  Turn 2
+INFO   :: 14:34:09: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:34:09: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:34:09: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(batteryrating=standard)', 1.0]]
+INFO   :: 14:34:09: root                                            SemI.py <decode>201 :  [('inform(batteryrating=standard)', 1)]
+INFO   :: 14:34:09: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(batteryrating=standard)', 1)]
+INFO   :: 14:34:09: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(batteryrating=standard)', 1)]
+DIAL   :: 14:34:09: root                                   Agent.py <_print_sys_act>591 :  Sys > request(couleur)
+DIAL   :: 14:34:09: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:34:09: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: Quel couleur desirez vous? noir, rouge, gris, bleu, or, autre to tts.
+INFO   :: 14:34:25: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:34:25: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'noir', 1)]
+DIAL   :: 14:34:25: root                                    Agent.py <continue_call>232 :  user input: [(u'noir', 1)]
+DIAL   :: 14:34:25: root                                      Agent.py <_print_turn>576 :  Turn 3
+INFO   :: 14:34:25: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:34:25: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:34:25: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(couleur=noir)', 1.0]]
+INFO   :: 14:34:25: root                                            SemI.py <decode>201 :  [('inform(couleur=noir)', 1)]
+INFO   :: 14:34:25: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(couleur=noir)', 1)]
+INFO   :: 14:34:25: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(couleur=noir)', 1)]
+DIAL   :: 14:34:25: root                                   Agent.py <_print_sys_act>591 :  Sys > request(driverange)
+DIAL   :: 14:34:25: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:34:25: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: Quel taille de disque recherchez vous, petit, moyen, ou large? to tts.
+INFO   :: 14:34:45: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:34:45: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'large disque', 1)]
+DIAL   :: 14:34:45: root                                    Agent.py <continue_call>232 :  user input: [(u'large disque', 1)]
+DIAL   :: 14:34:45: root                                      Agent.py <_print_turn>576 :  Turn 4
+INFO   :: 14:34:45: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:34:45: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:34:45: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=large)', 1.0]]
+INFO   :: 14:34:45: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=small)', 1.0]]
+WARNING:: 14:34:45: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot driverange has values small and large.
+INFO   :: 14:34:45: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=medium)', 1.0]]
+WARNING:: 14:34:45: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot driverange has values medium and large.
+INFO   :: 14:34:45: root                                            SemI.py <decode>201 :  [('inform(driverange=large)', 1)]
+INFO   :: 14:34:45: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(driverange=large)', 1)]
+INFO   :: 14:34:45: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(driverange=large)', 1)]
+DIAL   :: 14:34:45: root                                   Agent.py <_print_sys_act>591 :  Sys > inform(couleur="noir",driverange="large",name="iphone x",batteryrating="standard")
+DIAL   :: 14:34:45: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:34:45: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: Le iphone x est de couleur noir , est avec une batterie moyenne et est avec une grande taille de disque . to tts.
+INFO   :: 14:35:21: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:35:21: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'quel est son tarif', 1)]
+DIAL   :: 14:35:21: root                                    Agent.py <continue_call>232 :  user input: [(u'quel est son tarif', 1)]
+DIAL   :: 14:35:21: root                                      Agent.py <_print_turn>576 :  Turn 5
+INFO   :: 14:35:21: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:35:21: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:35:21: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'request(price)', 1.0]]
+INFO   :: 14:35:21: root                                            SemI.py <decode>201 :  [('request(price)', 1)]
+INFO   :: 14:35:21: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('request(price)', 1)]
+INFO   :: 14:35:21: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('request(price)', 1)]
+DIAL   :: 14:35:21: root                                   Agent.py <_print_sys_act>591 :  Sys > inform(name="iphone x",price="899")
+DIAL   :: 14:35:21: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:35:22: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: iphone x est evalué à 899 euros . to tts.
+INFO   :: 14:35:38: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:35:38: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'quel est son disqur', 1)]
+DIAL   :: 14:35:38: root                                    Agent.py <continue_call>232 :  user input: [(u'quel est son disqur', 1)]
+DIAL   :: 14:35:38: root                                      Agent.py <_print_turn>576 :  Turn 6
+INFO   :: 14:35:38: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:35:38: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:35:38: root                                            SemI.py <decode>201 :  [('', 1)]
+INFO   :: 14:35:38: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('', 1)]
+INFO   :: 14:35:38: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('', 1)]
+DIAL   :: 14:35:38: root                                   Agent.py <_print_sys_act>591 :  Sys > inform(name="iphone x",dimension="380.0 x 242.0 x 30.8 - 33.35")
+DIAL   :: 14:35:38: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:35:38: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: iphone x est dimensions of33 inches . to tts.
+INFO   :: 14:35:47: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:35:47: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'quel est son disque', 1)]
+DIAL   :: 14:35:47: root                                    Agent.py <continue_call>232 :  user input: [(u'quel est son disque', 1)]
+DIAL   :: 14:35:47: root                                      Agent.py <_print_turn>576 :  Turn 7
+INFO   :: 14:35:47: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:35:47: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:35:47: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'request(drive)', 1.0]]
+INFO   :: 14:35:47: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=large)', 1.0]]
+INFO   :: 14:35:47: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=small)', 1.0]]
+WARNING:: 14:35:47: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot driverange has values small and large.
+INFO   :: 14:35:47: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=medium)', 1.0]]
+WARNING:: 14:35:47: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot driverange has values medium and large.
+INFO   :: 14:35:47: root                                            SemI.py <decode>201 :  [('inform(driverange=large)|request(drive)', 1)]
+INFO   :: 14:35:47: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(driverange=large)|request(drive)', 1)]
+INFO   :: 14:35:47: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(driverange=large)|request(drive)', 1)]
+DIAL   :: 14:35:47: root                                   Agent.py <_print_sys_act>591 :  Sys > inform(name="iphone x",drive="128 gb")
+DIAL   :: 14:35:47: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:35:48: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: iphone x est un disque de 128 gb . to tts.
+INFO   :: 14:36:07: root                                 DialogueServer.py <do_POST>227 :  Continuing session: 9898 with agent_id Smith 
+INFO   :: 14:36:07: root                                 DialogueServer.py <do_POST>243 :  ASR: [(u'quel est sa masse', 1)]
+DIAL   :: 14:36:07: root                                    Agent.py <continue_call>232 :  user input: [(u'quel est sa masse', 1)]
+DIAL   :: 14:36:07: root                                      Agent.py <_print_turn>576 :  Turn 8
+INFO   :: 14:36:07: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 14:36:08: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 14:36:08: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'request(weightrange)', 1.0]]
+INFO   :: 14:36:08: root                                            SemI.py <decode>201 :  [('request(weightrange)', 1)]
+INFO   :: 14:36:08: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('request(weightrange)', 1)]
+INFO   :: 14:36:08: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('request(weightrange)', 1)]
+DIAL   :: 14:36:08: root                                   Agent.py <_print_sys_act>591 :  Sys > inform(name="iphone x",weightrange="mid weight")
+DIAL   :: 14:36:08: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+INFO   :: 14:36:08: root                                 DialogueServer.py <do_POST>345 :  Sending prompt: iphone x est un téléphone de poids moyen . to tts.

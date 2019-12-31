@@ -1,0 +1,27 @@
+#NLG message generation rules
+# Last modified by JS on June 06, 2006
+
+# This file consists of two parts:
+
+# The first section is a list of rules defining system prompts for dialogue acts.
+# You can use $A, $B, $C as variables for slot names and $U, $V, $W, $X, $Y, $Z as variables for value names.
+# You can use vertical bars "|" to define several messages for the same dialogue act.
+
+# The second section contains a list of venues and locations. You can copy and paste this part from JVrules.txt.
+# Just add an asterisk "*" to all venue and location names that require the article "the" in sentences
+# like "I can recommend X"
+
+
+# --------------- RULES --------------------------
+
+hello() : "Bonjour ! Bienvenue dans cette version modifée de PyDial. Comment puis-je vous aider?";
+
+hello(help) : "J'ai du mal à comprendre ce que vous voulez. Voulez-vous _DOMAINS_?";
+hello(more) : "Puis faire quoi que ce soit d'autre pour vous?";
+
+bad() : "Mumble";
+null() : "Navré, je suis un peu confus. Répétez votre requête, s'il vous plaît.";
+repeat() : "Pouvez-vous répéter?";
+bye() : "Merci, au revoir!";
+bye(toptictrackertimedout) : "Je suis désolé, mes réponses sont limitées. Veuillez recommencer une session."; 
+bye(topictrackeruserended): "Désolé de ne pas avoir pu vous aider. Au revoir.";

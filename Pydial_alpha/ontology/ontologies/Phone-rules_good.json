@@ -1,0 +1,92 @@
+{
+    "binary": [], 
+    "discourseAct": [
+        "ack", 
+        "hello", 
+        "none", 
+        "repeat", 
+        "silence", 
+        "thankyou"
+    ], 
+    "informable": {
+        "batteryrating": [
+            "exceptional", 
+            "good", 
+            "standard"
+        ], 
+        "driverange": [
+            "large", 
+            "medium", 
+            "small"
+        ], 
+        "family": [
+            "i phone", 
+            "samsung"
+        ], 
+        "isforbusinesscomputing": [
+            "0", 
+            "1"
+        ], 
+        "name": [
+            "i phone 11", 
+            "i phone 5", 
+            "i phone 6", 
+            "i phone 6 plus", 
+            "i phone 6 s", 
+            "i phone 7", 
+            "i phone 7 plus", 
+            "i phone 8", 
+            "i phone 8 plus", 
+            "i phone x", 
+            "i phone x r plus", 
+            "samsung a 10", 
+            "samsung a 40", 
+            "samsung s 10", 
+            "samsung s 10 e", 
+            "samsung s 10 plus ", 
+            "samsung s 6", 
+            "samsung s 7", 
+            "samsung s 8", 
+            "samsung s 9"
+        ], 
+        "pricerange": [
+            "budget", 
+            "expensive", 
+            "moderate"
+        ], 
+        "weightrange": [
+            "heavy", 
+            "light weight", 
+            "mid weight"
+        ]
+    }, 
+    "method": [
+        "none", 
+        "byconstraints", 
+        "byname", 
+        "finished", 
+        "byalternatives", 
+        "restart"
+    ], 
+    "requestable": [
+        "name", 
+        "family", 
+        "price", 
+        "drive", 
+        "dimension", 
+        "pricerange", 
+        "batteryrating", 
+        "weightrange", 
+        "isforbusinesscomputing", 
+        "driverange"
+    ], 
+    "system_requestable": [
+        "family", 
+        "pricerange", 
+        "driverange", 
+        "weightrange", 
+        "isforbusinesscomputing", 
+        "batteryrating"
+    ], 
+    "type": "laptop"
+}

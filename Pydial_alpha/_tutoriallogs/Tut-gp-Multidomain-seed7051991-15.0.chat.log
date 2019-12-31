@@ -1,0 +1,52 @@
+DIAL   :: 11:07:50: root                                   pydial.py <chat_command>1125 :  *** Chatting with policies ['SFRestaurants', 'CamRestaurants', 'Laptops11']: ***
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:50: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 11:07:51: root                                             Texthub.py <run>87 :  NOTE: texthub is not using any error simulation at present.
+DIAL   :: 11:07:51: root                                       Agent.py <start_call>171 :  >> NEW DIALOGUE SESSION. Number: 1
+DIAL   :: 11:07:51: root                                      Agent.py <_print_turn>580 :  ** Turn 0 **
+DIAL   :: 11:07:51: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello()
+DIAL   :: 11:07:51: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:00: root                                    Agent.py <continue_call>233 :  user input: [('I would like an hotel', 1.0)]
+DIAL   :: 11:08:00: root                                      Agent.py <_print_turn>580 :  ** Turn 1 **
+DIAL   :: 11:08:00: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:00: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:04: root                                    Agent.py <continue_call>233 :  user input: [('help', 1.0)]
+DIAL   :: 11:08:04: root                                      Agent.py <_print_turn>580 :  ** Turn 2 **
+DIAL   :: 11:08:04: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:04: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:11: root                                    Agent.py <continue_call>233 :  user input: [('i want an hotel', 1.0)]
+DIAL   :: 11:08:11: root                                      Agent.py <_print_turn>580 :  ** Turn 3 **
+DIAL   :: 11:08:11: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:11: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:14: root                                    Agent.py <continue_call>233 :  user input: [('hotel', 1.0)]
+DIAL   :: 11:08:14: root                                      Agent.py <_print_turn>580 :  ** Turn 4 **
+DIAL   :: 11:08:14: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:14: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:18: root                                    Agent.py <continue_call>233 :  user input: [('restaurant', 1.0)]
+DIAL   :: 11:08:18: root                                      Agent.py <_print_turn>580 :  ** Turn 5 **
+DIAL   :: 11:08:18: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:18: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:27: root                                    Agent.py <continue_call>233 :  user input: [('I WANT A RESTAURANT', 1.0)]
+DIAL   :: 11:08:27: root                                      Agent.py <_print_turn>580 :  ** Turn 6 **
+DIAL   :: 11:08:27: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:27: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:30: root                                    Agent.py <continue_call>233 :  user input: [('I AM HUNGRY', 1.0)]
+DIAL   :: 11:08:30: root                                      Agent.py <_print_turn>580 :  ** Turn 7 **
+DIAL   :: 11:08:30: root                                   Agent.py <_print_sys_act>595 :  | Sys > hello(help)
+DIAL   :: 11:08:30: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:38: root                                    Agent.py <continue_call>233 :  user input: [('bye', 1.0)]
+DIAL   :: 11:08:38: root                                      Agent.py <_print_turn>580 :  ** Turn 8 **
+WARNING:: 11:08:38: root                               Agent.py <_check_USER_ending>664 :  Ignoring system act: bye(topictrackeruserended) and saying goodbye as user has said bye
+DIAL   :: 11:08:38: root                                   Agent.py <_print_sys_act>595 :  | Sys > bye()
+DIAL   :: 11:08:38: root                                     Agent.py <_agents_semo>680 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:08:38: root                                   pydial.py <chat_command>1130 :  *** Chat complete
