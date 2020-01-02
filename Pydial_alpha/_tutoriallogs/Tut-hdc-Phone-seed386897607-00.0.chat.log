@@ -1,0 +1,36 @@
+INFO   :: 15:20:54: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/Phone-rules.json
+INFO   :: 15:20:54: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/Phone-dbase.db
+INFO   :: 15:20:54: root                                      pydial.py <initialise>373 :  Seed = 386897607
+INFO   :: 15:20:54: root                                      pydial.py <initialise>374 :  Root = /home/alpha/Bureau/CERI/robotparlant/Pydial_alpha
+DIAL   :: 15:20:54: root                                   pydial.py <chat_command>1125 :  *** Chatting with policies ['Phone']: ***
+INFO   :: 15:20:54: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: topicmanager
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:54: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:20:55: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: topicmanager - defaulting to HDC
+WARNING:: 15:20:55: root                                             Texthub.py <run>87 :  NOTE: texthub is not using any error simulation at present.
+DIAL   :: 15:20:55: root                                       Agent.py <start_call>170 :  >> NEW DIALOGUE SESSION. Number: 1
+INFO   :: 15:20:55: root                                    Agent.py <_hand_control>470 :  Domain topicmanager is both already running and has control
+DIAL   :: 15:20:55: root                                      Agent.py <_print_turn>579 :  ** Turn 0 **
+DIAL   :: 15:20:55: root                                   Agent.py <_print_sys_act>594 :  | Sys > hello()
+DIAL   :: 15:20:55: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: topicmanager
+DIAL   :: 15:21:48: root                                    Agent.py <continue_call>232 :  user input: [('je veux un telephone', 1.0)]
+DIAL   :: 15:21:48: root                                      Agent.py <_print_turn>579 :  ** Turn 1 **
+INFO   :: 15:21:48: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: topicmanager
+INFO   :: 15:21:48: root                                    Agent.py <_hand_control>470 :  Domain topicmanager is both already running and has control
+INFO   :: 15:21:48: root                                            SemI.py <decode>201 :  [('', 1.0)]
+INFO   :: 15:21:48: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('', 1.0)]
+INFO   :: 15:21:48: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('', 1.0)]
+DIAL   :: 15:21:48: root                                   Agent.py <_print_sys_act>594 :  | Sys > hello(help)
+DIAL   :: 15:21:48: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: topicmanager

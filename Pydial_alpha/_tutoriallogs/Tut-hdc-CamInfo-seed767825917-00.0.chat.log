@@ -1,0 +1,29 @@
+INFO   :: 15:16:08: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/CamRestaurants-rules.json
+INFO   :: 15:16:08: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/CamRestaurants-dbase.db
+INFO   :: 15:16:08: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/CamHotels-rules.json
+INFO   :: 15:16:08: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/CamHotels-dbase.db
+INFO   :: 15:16:08: root                                      pydial.py <initialise>373 :  Seed = 767825917
+INFO   :: 15:16:08: root                                      pydial.py <initialise>374 :  Root = /home/alpha/Bureau/CERI/robotparlant/Pydial_alpha
+DIAL   :: 15:16:08: root                                   pydial.py <chat_command>1125 :  *** Chatting with policies ['CamRestaurants', 'CamHotels']: ***
+INFO   :: 15:16:08: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: topicmanager
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:08: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 15:16:11: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: topicmanager - defaulting to HDC
+WARNING:: 15:16:11: root                                             Texthub.py <run>87 :  NOTE: texthub is not using any error simulation at present.
+DIAL   :: 15:16:11: root                                       Agent.py <start_call>170 :  >> NEW DIALOGUE SESSION. Number: 1
+INFO   :: 15:16:11: root                                    Agent.py <_hand_control>470 :  Domain topicmanager is both already running and has control
+DIAL   :: 15:16:11: root                                      Agent.py <_print_turn>579 :  ** Turn 0 **
+DIAL   :: 15:16:11: root                                   Agent.py <_print_sys_act>594 :  | Sys > hello()
+DIAL   :: 15:16:11: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: topicmanager

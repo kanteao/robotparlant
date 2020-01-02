@@ -75,7 +75,7 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
         self.slot_vocab["dimension"] = "(size|dimension|taille)"
         self.slot_vocab["weight"] = "(weight|poids)(?!(\ ?range))"
         self.slot_vocab["weightrange"] = "(weight|weight|poids\ ?range)"
-        self.slot_vocab["batteryrating"] = "(battery|battery|batterie\ ?rating|rating|estimation\ of\ the\ (laptops\ )*battery)"
+        self.slot_vocab["batteryrating"] = "(batterie|battery|batterie\ ?rating|rating|estimation\ of\ the\ (laptops\ )*battery)"
         #self.slot_vocab["isforbusinesscomputing"] = "(business\ computing|gaming|fun|games|work|play)"
         #self.slot_vocab["isforbusinesscomputing"] =ur"(?:disponible\s*(?:en|dans\s*un)\s*[Hh]appy\s*[Mm]eal)"
         self.slot_vocab["drive"] = "(drive|hard|disque\ *drive)(?!(\ ?range))"
@@ -84,7 +84,7 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
         self.slot_vocab["family"] = "(family|class|marque)"
         self.slot_vocab["couleur"] = "(couleur|rouge|bleu|noir|gris|blanc|or)"
         self.slot_vocab["processeur"] = "(processeur|vitesse|rapide)"
-        self.slot_vocab["photo"] = "(photo|appareil|pixel|pixels)"
+        self.slot_vocab["photo"] = "(photo|appareil|pixel|pixels|resolution)"
         #-------------------------------------------------------------------------------------------    
         # Generate regular expressions for requests:
         self._set_request_regex()
@@ -243,7 +243,7 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
         slot = 'batteryrating'
         # {u'exceptional': '(exceptional)', u'good': '(good)', u'standard': '(standard)'}
         self.slot_values[slot]['exceptional'] = "(exceptionelle|meilleur|parfait|best|super)"
-        self.slot_values[slot]['good'] = "(bonne|good)"
+        self.slot_values[slot]['good'] = "(bonne|good)*(batterie|battery)"
         self.slot_values[slot]['standard'] = "(standard|moyen)"
         self.slot_values[slot]['dontcare'] = "(peu\ importe|quelquesoit\ la\ batterie|dontcare)"
         # SLOT: weightrange
@@ -282,7 +282,7 @@ class RegexSemI_Phone(RegexSemI.RegexSemI):
 	slot = 'photo'
 	self.slot_values[slot]['super'] = "(super|parfaite|excellente)*(resolution|photo)"
         self.slot_values[slot]['acceptable'] = "(photo)*(acceptable|medium|average|moyenne|moyen)*(resolution|photo)"
-        self.slot_values[slot]['bonne'] = "(bonne|good)*(resolution|photo)"
+        self.slot_values[slot]['high'] = "(grande|great)*(resolution|photo)"
         self.slot_values[slot]['dontcare'] = "(peu\ importe|quel\ que\ soit\ le\ disque|dontcare)"
 	slot= 'couleur'
 	self.slot_values[slot]['noir'] = "(noir|noire|black)"

@@ -49,8 +49,8 @@
 ##############################################################
 
 %type_str($type) {
-  dontcare : "if you don't care about product type";
-  $type : "it is a $type";
+  dontcare : "peu importe la marque";
+  $type : "C'est un telephone de marque $type";
 }
 
 %couleur_str($couleur) {
@@ -60,11 +60,17 @@
 
 %processeur_str($processeur) {
   dontcare : "Dans toutes les types de processeur";
+  rapide: "avec un processeur rapide";
+  moyen: "avec un processeur rapide";
+  bon: "avec un bon processeur";
   $processeur : "de processeur $processeur";
 }
 
 %photo_str($photo) {
   dontcare : "Dans toutes les resolution de photo de telephone";
+  super: "de superbe resolution";
+  acceptable: "de resolution acceptable";
+  high: "de grande resolution";
   $photo : "de resolution $photo";
 }
 
@@ -75,11 +81,17 @@
 
 %processeur_inf($processeur) {
   dontcare : "Dans toutes les types de processeur";
+  rapide: "avec un processeur rapide";
+  moyen: "avec un processeur rapide";
+  bon: "avec un bon processeur";
   $processeur : "de processeur $processeur";
 }
 
 %photo_inf($photo) {
   dontcare : "Dans toutes les resolution de photo de telephone";
+  super: "de superbe resolution";
+  acceptable: "de resolution acceptable";
+  high: "de grande resolution";
   $photo : "de resolution $photo";
 }
 
@@ -90,23 +102,35 @@
 
 %pricerange_str($price) {
   dontcare : "quelquesoit le prix";
+  budget: "de prix abordable"; 
+  expensive: "dans la gamme de prix chere";
+  moderate: "dans la gamme de prix de moyenne";
   $price : "dans la gamme de prix $price";
 }
 
 %weightrange_str($weight) {
   dontcare : "peu importe le poids";
+  heavy: "un smartphone lourd";
+  "light weight":"un smartphone leger";
+  "mid weight": "un smartphone de poids moyen";
   $weight : "dans la gamme de poids $weight";
 }
 
 
 %driverange_str($drive) {
   dontcare : "peu importe la taille de disque";
+  large: "dans la taille de disque large";
+  medium:"dans la taille de disque moyenne";
+  small: "de petite taille de disque";
   $drive : "dans la taille de disque $drive";
 }
 
 
 %batteryrating_str($batteryrating) {
   dontcare : "peu importe l'estimation de la batterie";
+  exceptional: "avec une batterie exceptionnelle";
+  good: "avec une bonne batterie"; 
+  standard:"avec une batterie standard";
   $batteryrating : "dans la gamme de battery $batteryrating";
 }
 
