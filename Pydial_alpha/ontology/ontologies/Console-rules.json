@@ -1,0 +1,121 @@
+{
+    "binary": [], 
+    "discourseAct": [
+        "ack", 
+        "hello", 
+        "none", 
+        "repeat", 
+        "silence", 
+        "thankyou"
+    ], 
+    "informable": {
+        "batteryrating": [
+            "good", 
+            "none", 
+            "standard"
+        ], 
+        "categorie": [
+            "home", 
+            "pocket"
+        ], 
+        "couleur": [
+            "blanc", 
+            "bleu",
+            "rouge", 
+            "gris", 
+            "noir", 
+            "or"
+        ],
+        "driverange": [
+            "large", 
+            "medium", 
+            "small"
+        ], 
+        "drive": [
+            "1 teraoctet", 
+            "16 gigaoctets", 
+            "160 gigaoctets", 
+            "2 gigaoctets", 
+            "250 gigaoctets", 
+            "32 gigaoctets", 
+            "320 gigaoctets", 
+            "4 gigaoctets", 
+            "500 gigaoctets", 
+            "8 gigaoctets"
+        ],  
+        "family": [
+            "nintendo", 
+            "playstation", 
+            "xbox"
+        ], 
+        "name": [
+            "nintendo 2ds", 
+            "nintendo 3ds", 
+            "nintendo switch", 
+            "nintendo switch lite", 
+            "ps3", 
+            "ps4", 
+            "ps4 pro", 
+            "psp", 
+            "wii u", 
+            "xbox 360", 
+            "xbox 360 kinect", 
+            "xbox one s", 
+            "xbox one x"
+        ], 
+        "pricerange": [
+            "budget", 
+            "expensive", 
+            "moderate"
+        ], 
+        "price": [
+            "109", 
+            "119", 
+            "139", 
+            "149", 
+            "179", 
+            "199", 
+            "219", 
+            "269", 
+            "279", 
+            "299", 
+            "319", 
+            "339", 
+            "349", 
+            "379", 
+            "399", 
+            "499", 
+            "79", 
+            "99"
+        ], 
+        "processeur": [
+            "bon", 
+            "moyen", 
+            "rapide"
+        ]
+    }, 
+    "method": [
+        "none", 
+        "byconstraints", 
+        "byname", 
+        "finished", 
+        "byalternatives", 
+        "restart"
+    ], 
+    "requestable": [
+        "categorie", 
+        "name", 
+        "family", 
+        "couleur", 
+        "price", 
+        "drive", 
+        "processeur"
+    ], 
+    "system_requestable": [
+        "categorie", 
+        "family", 
+        "couleur",
+        "processeur"
+    ], 
+    "type": "console"
+}

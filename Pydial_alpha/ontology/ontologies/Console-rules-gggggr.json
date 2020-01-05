@@ -1,0 +1,62 @@
+{
+    "binary": [], 
+    "discourseAct": [
+        "ack", 
+        "hello", 
+        "none", 
+        "repeat", 
+        "silence", 
+        "thankyou"
+    ], 
+    "informable": {
+        "categorie": [
+            "home", 
+            "pocket"
+        ], 
+        "driverange": [
+            "large", 
+            "medium", 
+            "small"
+        ], 
+        "family": [
+            "nintendo", 
+            "playstation", 
+            "xbox"
+        ], 
+        "pricerange": [
+            "budget", 
+            "expensive", 
+            "moderate"
+        ], 
+        "processeur": [
+            "bon", 
+            "rapide", 
+            "moyen"
+        ]
+        
+    }, 
+    "method": [
+        "none", 
+        "byconstraints", 
+        "byname", 
+        "finished", 
+        "byalternatives", 
+        "restart"
+    ], 
+    "requestable": [
+        "couleur", 
+        "batteryrating", 
+        "price", 
+        "drive", 
+        "name",
+        "processeur"
+    ], 
+    "system_requestable": [
+        "pricerange", 
+        "categorie", 
+        "driverange", 
+        "family", 
+        "processeur"
+    ], 
+    "type": "console"
+}

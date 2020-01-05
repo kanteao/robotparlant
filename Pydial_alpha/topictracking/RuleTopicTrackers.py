@@ -122,6 +122,10 @@ class KeywordSpottingTopicTracker(TopicTrackerInterface):
                 kwds=["san francisco","hotel", "guest house", "guesthouse", "hostel", "motel", "place to stay"]
             elif dom=="wikipedia":
                 kwds=["wiki"]
+            elif dom=="Phone":
+                kwds=["smartphone","phone","telephone"]
+            elif dom=="Console":
+                kwds=["console","jeu","jeu video"]
 
             self.keywords[dom]=kwds
         # self.keywords["CamRestaurants"] = ["cambridge","restaurant",'food']

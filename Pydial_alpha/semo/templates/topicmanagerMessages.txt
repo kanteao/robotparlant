@@ -14,14 +14,14 @@
 
 # --------------- RULES --------------------------
 
-hello() : "Hello, welcome to the Cambridge Multi-Domain dialogue system. How may I help you?";
+hello() : "Bonjour! Bienvenue au service multidomaine du céri. Que puis-je faire pour vous?";
 
-hello(help) : "I'm having trouble understanding what you want. Do you want a _DOMAINS_?";
-hello(more) : "Can I help you with anything else?";
+hello(help) : "Pour être honnête, je n'ai pas tout compris. Voulez vous un _DOMAINS_?";
+hello(more) : "Avez vous d'autres requettes?";
 
 bad() : "Mumble";
 null() : "Sorry I am a bit confused; please tell me again what you are looking for.";
 repeat() : "Could you please repeat that?";
-bye() : "Thank you, goodbye.";
+bye() : "Merci";
 bye(toptictrackertimedout) : "Sorry I can't understand you. Goodbye"; 
 bye(topictrackeruserended): "Sorry I couldn't help. Goodbye";
