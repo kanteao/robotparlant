@@ -1,56 +1,158 @@
-INFO   :: 23:37:08: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/Console-rules.json
-INFO   :: 23:37:08: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/Console-dbase.db
-INFO   :: 23:37:08: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/Phone-rules.json
-INFO   :: 23:37:08: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/Phone-dbase.db
-INFO   :: 23:37:08: root                                      pydial.py <initialise>373 :  Seed = 117
-INFO   :: 23:37:08: root                                      pydial.py <initialise>374 :  Root = /Users/kourakanewane/Documents/GitHub/robotparlant/Pydial_alpha
-DIAL   :: 23:37:08: root                                   pydial.py <chat_command>1125 :  *** Chatting with policies ['Console', 'Phone']: ***
-INFO   :: 23:37:09: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: topicmanager
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:09: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
-WARNING:: 23:37:15: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: topicmanager - defaulting to HDC
-WARNING:: 23:37:15: root                                             Texthub.py <run>87 :  NOTE: texthub is not using any error simulation at present.
-DIAL   :: 23:37:15: root                                       Agent.py <start_call>170 :  >> NEW DIALOGUE SESSION. Number: 1
-INFO   :: 23:37:15: root                                    Agent.py <_hand_control>470 :  Domain topicmanager is both already running and has control
-DIAL   :: 23:37:15: root                                      Agent.py <_print_turn>579 :  ** Turn 0 **
-DIAL   :: 23:37:15: root                                   Agent.py <_print_sys_act>594 :  | Sys > hello()
-DIAL   :: 23:37:15: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: topicmanager
-DIAL   :: 23:57:09: root                                    Agent.py <continue_call>232 :  user input: [('je veux un telephone', 1.0)]
-DIAL   :: 23:57:09: root                                      Agent.py <_print_turn>579 :  ** Turn 1 **
-INFO   :: 23:57:09: root                         RuleTopicTrackers.py <infer_domain>156 :  Phone keyword found in: je veux un telephone
-INFO   :: 23:57:09: root                              TopicTracking.py <track_topic>140 :  TopicTracker believes we switched domains. From topicmanager to Phone
-INFO   :: 23:57:09: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
-INFO   :: 23:57:09: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: Phone
-WARNING:: 23:57:09: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: Phone - defaulting to HDC
-WARNING:: 23:57:09: root                                      HDCPolicy.py <__init__>82 :  Policy file is given: , but policy type is set to hdc. Ignoring the given policy file and using hdc policy.
-INFO   :: 23:57:09: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(type=telephone)', 1.0]]
-INFO   :: 23:57:09: root                                            SemI.py <decode>201 :  [('inform(type=telephone)', 1.0)]
-INFO   :: 23:57:09: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(type=telephone)', 1.0)]
-INFO   :: 23:57:09: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(type=telephone)', 1.0)]
-DIAL   :: 23:57:09: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(batteryrating)
-DIAL   :: 23:57:09: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
-DIAL   :: 23:57:15: root                                    Agent.py <continue_call>232 :  user input: [('merci', 1.0)]
-DIAL   :: 23:57:15: root                                      Agent.py <_print_turn>579 :  ** Turn 2 **
-INFO   :: 23:57:15: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
-INFO   :: 23:57:15: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
-INFO   :: 23:57:15: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [['bye()', 1.0]]
-INFO   :: 23:57:15: root                                            SemI.py <decode>201 :  [('bye()', 1.0)]
-INFO   :: 23:57:15: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('bye()', 1.0)]
-INFO   :: 23:57:15: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('bye()', 1.0)]
-WARNING:: 23:57:15: root                               Agent.py <_check_USER_ending>663 :  Ignoring system act: request(batteryrating) and saying goodbye as user has said bye
-DIAL   :: 23:57:15: root                                   Agent.py <_print_sys_act>594 :  | Sys > bye()
-DIAL   :: 23:57:15: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
-DIAL   :: 23:57:15: root                                   pydial.py <chat_command>1130 :  *** Chat complete
+INFO   :: 11:40:51: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/Console-rules.json
+INFO   :: 11:40:51: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/Console-dbase.db
+INFO   :: 11:40:51: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: ontology/ontologies/Phone-rules.json
+INFO   :: 11:40:51: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: ontology/ontologies/Phone-dbase.db
+INFO   :: 11:40:51: root                                      pydial.py <initialise>373 :  Seed = 117
+INFO   :: 11:40:51: root                                      pydial.py <initialise>374 :  Root = /home/alpha/Bureau/CERI/robotparlant/Pydial_alpha
+DIAL   :: 11:40:51: root                                   pydial.py <chat_command>1125 :  *** Chatting with policies ['Console', 'Phone']: ***
+INFO   :: 11:40:51: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: topicmanager
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                                      RegexSemI.py <__init__>83 :  No rTYPE regex has been set.
+WARNING:: 11:40:51: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: topicmanager - defaulting to HDC
+WARNING:: 11:40:51: root                                             Texthub.py <run>87 :  NOTE: texthub is not using any error simulation at present.
+DIAL   :: 11:40:51: root                                       Agent.py <start_call>170 :  >> NEW DIALOGUE SESSION. Number: 1
+INFO   :: 11:40:51: root                                    Agent.py <_hand_control>470 :  Domain topicmanager is both already running and has control
+DIAL   :: 11:40:51: root                                      Agent.py <_print_turn>579 :  ** Turn 0 **
+DIAL   :: 11:40:51: root                                   Agent.py <_print_sys_act>594 :  | Sys > hello()
+DIAL   :: 11:40:51: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: topicmanager
+DIAL   :: 11:41:00: root                                    Agent.py <continue_call>232 :  user input: [('je veux un smartphone', 1.0)]
+DIAL   :: 11:41:00: root                                      Agent.py <_print_turn>579 :  ** Turn 1 **
+INFO   :: 11:41:00: root                         RuleTopicTrackers.py <infer_domain>156 :  Phone keyword found in: je veux un smartphone
+INFO   :: 11:41:00: root                              TopicTracking.py <track_topic>140 :  TopicTracker believes we switched domains. From topicmanager to Phone
+INFO   :: 11:41:00: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 11:41:00: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: Phone
+WARNING:: 11:41:00: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: Phone - defaulting to HDC
+WARNING:: 11:41:00: root                                      HDCPolicy.py <__init__>82 :  Policy file is given: , but policy type is set to hdc. Ignoring the given policy file and using hdc policy.
+INFO   :: 11:41:01: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(type=telephone)', 1.0]]
+INFO   :: 11:41:01: root                                            SemI.py <decode>201 :  [('inform(type=telephone)', 1.0)]
+INFO   :: 11:41:01: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(type=telephone)', 1.0)]
+INFO   :: 11:41:01: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(type=telephone)', 1.0)]
+DIAL   :: 11:41:01: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(batteryrating)
+DIAL   :: 11:41:01: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+DIAL   :: 11:41:14: root                                    Agent.py <continue_call>232 :  user input: [('une batterie exceptionelle', 1.0)]
+DIAL   :: 11:41:14: root                                      Agent.py <_print_turn>579 :  ** Turn 2 **
+INFO   :: 11:41:14: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 11:41:14: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 11:41:14: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(batteryrating=good)', 1.0]]
+INFO   :: 11:41:14: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(batteryrating=exceptional)', 1.0]]
+WARNING:: 11:41:14: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot batteryrating has values exceptional and good.
+INFO   :: 11:41:14: root                                            SemI.py <decode>201 :  [('inform(batteryrating=good)', 1.0)]
+INFO   :: 11:41:14: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(batteryrating=good)', 1.0)]
+INFO   :: 11:41:14: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(batteryrating=good)', 1.0)]
+DIAL   :: 11:41:14: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(couleur)
+DIAL   :: 11:41:14: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+DIAL   :: 11:41:21: root                                    Agent.py <continue_call>232 :  user input: [('couleur noir', 1.0)]
+DIAL   :: 11:41:21: root                                      Agent.py <_print_turn>579 :  ** Turn 3 **
+INFO   :: 11:41:21: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 11:41:21: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 11:41:21: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(couleur=noir)', 1.0]]
+INFO   :: 11:41:21: root                                            SemI.py <decode>201 :  [('inform(couleur=noir)', 1.0)]
+INFO   :: 11:41:21: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(couleur=noir)', 1.0)]
+INFO   :: 11:41:21: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(couleur=noir)', 1.0)]
+DIAL   :: 11:41:21: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(driverange)
+DIAL   :: 11:41:21: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+DIAL   :: 11:41:30: root                                    Agent.py <continue_call>232 :  user input: [('un disque large', 1.0)]
+DIAL   :: 11:41:30: root                                      Agent.py <_print_turn>579 :  ** Turn 4 **
+INFO   :: 11:41:30: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 11:41:30: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 11:41:30: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=large)', 1.0]]
+INFO   :: 11:41:30: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=small)', 1.0]]
+WARNING:: 11:41:30: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot driverange has values small and large.
+INFO   :: 11:41:30: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(driverange=medium)', 1.0]]
+WARNING:: 11:41:30: root                                        RegexSemI.py <clean>267 :  Sematic decoding of input lead to different interpretations within one hypothesis. Slot driverange has values medium and large.
+INFO   :: 11:41:30: root                                            SemI.py <decode>201 :  [('inform(driverange=large)', 1.0)]
+INFO   :: 11:41:30: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(driverange=large)', 1.0)]
+INFO   :: 11:41:30: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(driverange=large)', 1.0)]
+DIAL   :: 11:41:30: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(family)
+DIAL   :: 11:41:30: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+DIAL   :: 11:41:35: root                                    Agent.py <continue_call>232 :  user input: [('samsung', 1.0)]
+DIAL   :: 11:41:35: root                                      Agent.py <_print_turn>579 :  ** Turn 5 **
+INFO   :: 11:41:35: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 11:41:35: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 11:41:35: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(family=samsung)', 1.0]]
+INFO   :: 11:41:35: root                                            SemI.py <decode>201 :  [('inform(family=samsung)', 1.0)]
+INFO   :: 11:41:35: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(family=samsung)', 1.0)]
+INFO   :: 11:41:35: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(family=samsung)', 1.0)]
+DIAL   :: 11:41:35: root                                   Agent.py <_print_sys_act>594 :  | Sys > inform(couleur="noir",driverange="large",name="samsung s 10 e",family="samsung",batteryrating="good")
+DIAL   :: 11:41:35: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+DIAL   :: 11:42:04: root                                    Agent.py <continue_call>232 :  user input: [('quel est son tarif', 1.0)]
+DIAL   :: 11:42:04: root                                      Agent.py <_print_turn>579 :  ** Turn 6 **
+INFO   :: 11:42:04: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Phone
+INFO   :: 11:42:04: root                                    Agent.py <_hand_control>470 :  Domain Phone is both already running and has control
+INFO   :: 11:42:04: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'request(price)', 1.0]]
+INFO   :: 11:42:04: root                                            SemI.py <decode>201 :  [('request(price)', 1.0)]
+INFO   :: 11:42:04: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('request(price)', 1.0)]
+INFO   :: 11:42:04: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('request(price)', 1.0)]
+DIAL   :: 11:42:04: root                                   Agent.py <_print_sys_act>594 :  | Sys > inform(name="samsung s 10 e",price="759")
+DIAL   :: 11:42:04: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Phone
+DIAL   :: 11:42:39: root                                    Agent.py <continue_call>232 :  user input: [('je veux une console', 1.0)]
+DIAL   :: 11:42:39: root                                      Agent.py <_print_turn>579 :  ** Turn 7 **
+INFO   :: 11:42:39: root                         RuleTopicTrackers.py <infer_domain>156 :  Console keyword found in: je veux une console
+INFO   :: 11:42:39: root                              TopicTracking.py <track_topic>140 :  TopicTracker believes we switched domains. From Phone to Console
+INFO   :: 11:42:39: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Console
+INFO   :: 11:42:39: root                                    Agent.py <_hand_control>453 :  Launching Dialogue Manager for domain: Console
+WARNING:: 11:42:39: root                     PolicyManager.py <_load_domains_policy>230 :  No policy section specified for domain: Console - defaulting to HDC
+WARNING:: 11:42:39: root                                      HDCPolicy.py <__init__>82 :  Policy file is given: , but policy type is set to hdc. Ignoring the given policy file and using hdc policy.
+INFO   :: 11:42:39: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(type=console)', 1.0]]
+INFO   :: 11:42:39: root                                            SemI.py <decode>201 :  [('inform(type=console)', 1.0)]
+INFO   :: 11:42:39: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(type=console)', 1.0)]
+INFO   :: 11:42:39: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(type=console)', 1.0)]
+DIAL   :: 11:42:39: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(categorie)
+DIAL   :: 11:42:39: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Console
+DIAL   :: 11:43:19: root                                    Agent.py <continue_call>232 :  user input: [('une console plus convivial', 1.0)]
+DIAL   :: 11:43:19: root                                      Agent.py <_print_turn>579 :  ** Turn 8 **
+INFO   :: 11:43:19: root                         RuleTopicTrackers.py <infer_domain>156 :  Console keyword found in: une console plus convivial
+INFO   :: 11:43:19: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Console
+INFO   :: 11:43:19: root                                    Agent.py <_hand_control>470 :  Domain Console is both already running and has control
+INFO   :: 11:43:19: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(categorie=home)', 1.0]]
+INFO   :: 11:43:19: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(type=console)', 1.0]]
+INFO   :: 11:43:19: root                                            SemI.py <decode>201 :  [('inform(type=console,categorie=home)', 1.0)]
+INFO   :: 11:43:19: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(type=console,categorie=home)', 1.0)]
+INFO   :: 11:43:19: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(type=console,categorie=home)', 1.0)]
+DIAL   :: 11:43:19: root                                   Agent.py <_print_sys_act>594 :  | Sys > request(family)
+DIAL   :: 11:43:19: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Console
+DIAL   :: 11:43:27: root                                    Agent.py <continue_call>232 :  user input: [('nintendo', 1.0)]
+DIAL   :: 11:43:27: root                                      Agent.py <_print_turn>579 :  ** Turn 9 **
+INFO   :: 11:43:27: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Console
+INFO   :: 11:43:27: root                                    Agent.py <_hand_control>470 :  Domain Console is both already running and has control
+INFO   :: 11:43:27: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'inform(family=nintendo)', 1.0]]
+INFO   :: 11:43:27: root                                            SemI.py <decode>201 :  [('inform(family=nintendo)', 1.0)]
+INFO   :: 11:43:27: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('inform(family=nintendo)', 1.0)]
+INFO   :: 11:43:27: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('inform(family=nintendo)', 1.0)]
+DIAL   :: 11:43:27: root                                   Agent.py <_print_sys_act>594 :  | Sys > inform(couleur="noir",categorie="home",name="wii u",family="nintendo")
+DIAL   :: 11:43:27: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Console
+DIAL   :: 11:43:46: root                                    Agent.py <continue_call>232 :  user input: [('quel est son prix', 1.0)]
+DIAL   :: 11:43:46: root                                      Agent.py <_print_turn>579 :  ** Turn 10 **
+INFO   :: 11:43:46: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Console
+INFO   :: 11:43:46: root                                    Agent.py <_hand_control>470 :  Domain Console is both already running and has control
+INFO   :: 11:43:46: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [[u'request(price)', 1.0]]
+INFO   :: 11:43:46: root                                            SemI.py <decode>201 :  [('request(price)', 1.0)]
+INFO   :: 11:43:46: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('request(price)', 1.0)]
+INFO   :: 11:43:46: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('request(price)', 1.0)]
+DIAL   :: 11:43:46: root                                   Agent.py <_print_sys_act>594 :  | Sys > inform(name="wii u",price="499")
+DIAL   :: 11:43:46: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Console
+DIAL   :: 11:44:24: root                                    Agent.py <continue_call>232 :  user input: [('merci', 1.0)]
+DIAL   :: 11:44:24: root                                      Agent.py <_print_turn>579 :  ** Turn 11 **
+INFO   :: 11:44:24: root                              TopicTracking.py <track_topic>146 :  After user_act - domain is now: Console
+INFO   :: 11:44:24: root                                    Agent.py <_hand_control>470 :  Domain Console is both already running and has control
+INFO   :: 11:44:24: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [['bye()', 1.0]]
+INFO   :: 11:44:24: root                                            SemI.py <decode>201 :  [('bye()', 1.0)]
+INFO   :: 11:44:24: root               SemIContextUtils.py <_add_context_to_user_act>61 :  Possibly adding context to user semi hyps: [('bye()', 1.0)]
+INFO   :: 11:44:24: root         ModularSemanticBeliefTracker.p <update_belief_state>86 :  SemI   > [('bye()', 1.0)]
+WARNING:: 11:44:24: root                               Agent.py <_check_USER_ending>663 :  Ignoring system act: bye() and saying goodbye as user has said bye
+DIAL   :: 11:44:24: root                                   Agent.py <_print_sys_act>594 :  | Sys > bye()
+DIAL   :: 11:44:24: root                                     Agent.py <_agents_semo>679 :  Domain with CONTROL: Console
+DIAL   :: 11:44:24: root                                   pydial.py <chat_command>1130 :  *** Chat complete
